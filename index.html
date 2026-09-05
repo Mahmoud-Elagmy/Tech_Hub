@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Hub</title>
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/master.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <video class="video" src="/assets/mainvedio.mp4" autoplay loop muted playsinline poster="/assets/Alt.webp"
+        onloadeddata="this.playbackRate=0.55"></video>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <p>Tech Hub</p>
+            </div>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="#">Categories</a></li>
+                </ul>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <li>
+                        <a href="#">Categories</a>
+                        <ul>
+                            <li><a href="#Laptops">Laptops</a></li>
+                            <li><a href="#PCs">PCs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="landing">
+        <div class="container">
+            <div class="text">
+                <h1 class="reflection">Tech Hub</h1>
+                <p>Welcome to Tech Hub, your ultimate destination for all things technology.</p>
+            </div>
+        </div>
+    </div>
+    <div class="laptops" id="Laptops">
+        <div class="container">
+            <div class="text">
+                <h2 class="reflection">Laptops</h2>
+                <p>Discover the latest and greatest laptops from top brands.</p>
+                <form action="laptops.html" method="get">
+                    <button class="btn" type="submit">Explore Laptops</button>
+                </form>
+            </div>
+            <div class="image">
+                <img class="active" src="/assets/Lapasset1.webp" alt="Laptops">
+                <img src="/assets/Lapasset2.webp" alt="Laptops" loading="lazy">
+                <img src="/assets/Lapasset3.webp" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="pc" id="PCs">
+        <div class="container">
+            <div class="text">
+                <h2 class="reflection">PCs</h2>
+                <p>Find the perfect PC for gaming, work, or everyday use.</p>
+                <form action="PCs.html" method="get">
+                    <button class="btn" type="submit">Explore PCs</button>
+                </form>
+            </div>
+            <div class="image">
+                <img class="active" src="/assets/Pcasset1.webp" alt="PCs">
+                <img src="/assets/PCasset2.webp" alt="PCs" loading="lazy">
+                <img src="/assets/Pcasset3.webp" alt="PCs" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="about" id="About">
+        <div class="container">
+            <h2 class="reflection">About Tech Hub</h2>
+            <p>Tech Hub is your go-to source for the latest technology news, reviews, and insights. We cover a wide
+                range of topics, including laptops, phones, PCs, and more. Our team of experts is dedicated to providing
+                you with accurate and up-to-date information to help you make informed decisions about your tech
+                purchases.</p>
+        </div>
+    </div>
+    <hr>
+    <div class="contact" id="Contact">
+        <div class="container">
+            <div class="text">
+                <h2 class="reflection">Contact Us</h2>
+                <p>If you have any questions or feedback, please don't hesitate to contact us.</p>
+                <div class="icons">
+                    <a href="https://www.github.com/Mahmoud-Elagmy" target="_blank"><i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mahmoud-elagmy-0b1b5524b/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <form action="mailto:mahmoudelagmy187@gmail.com" method="get">
+                <input type="email" id="email" name="email" placeholder="" required>
+                <div class="placeholdermail">Mail</div>
+                <textarea id="message" name="message" placeholder="" required></textarea>
+                <div class="placeholdermessage">Message</div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 Tech Hub. All rights reserved.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
