@@ -4,7 +4,7 @@ const laptopsData = {
     // ==========================================
     asus: [
         {
-            id: "asus-tuf-a15", brand: "Asus", name: "TUF Gaming A15", image: "/assets/asustuf.webp",
+            id: "asus-tuf-a15", brand: "Asus", name: "TUF Gaming A15", image: "assets/asustuf.webp",
             price: "EGP 58,000", priceVal: 58000,
             cpu: "AMD Ryzen 7 7735HS", cpuPower: 78,
             gpu: "RTX 4060 8GB", gpuPower: 80,
@@ -27,7 +27,7 @@ const laptopsData = {
             }
         },
         {
-            id: "asus-rog-g14", brand: "Asus", name: "ROG Zephyrus G14", image: "/assets/asusrog.webp",
+            id: "asus-rog-g14", brand: "Asus", name: "ROG Zephyrus G14", image: "assets/asusrog.webp",
             price: "EGP 85,000", priceVal: 85000,
             cpu: "AMD Ryzen 9 7940HS", cpuPower: 90,
             gpu: "RTX 4070 8GB", gpuPower: 90,
@@ -50,7 +50,7 @@ const laptopsData = {
             }
         },
         {
-            id: "asus-strix-g16", brand: "Asus", name: "ROG Strix G16", image: "/assets/asusrogflow.webp",
+            id: "asus-strix-g16", brand: "Asus", name: "ROG Strix G16", image: "assets/asusrogflow.webp",
             price: "EGP 78,000", priceVal: 78000,
             cpu: "Intel Core i7-13650HX", cpuPower: 90,
             gpu: "RTX 4060 8GB", gpuPower: 80,
@@ -73,7 +73,7 @@ const laptopsData = {
             }
         },
         {
-            id: "asus-zenbook-14", brand: "Asus", name: "Zenbook 14 OLED", image: "/assets/asuszenbook.webp",
+            id: "asus-zenbook-14", brand: "Asus", name: "Zenbook 14 OLED", image: "assets/asuszenbook.webp",
             price: "EGP 45,000", priceVal: 45000,
             cpu: "Intel Core Ultra 7 155H", cpuPower: 82,
             gpu: "Intel Arc Graphics", gpuPower: 35,
@@ -96,7 +96,7 @@ const laptopsData = {
             }
         },
         {
-            id: "asus-vivobook-16x", brand: "Asus", name: "Vivobook Pro 16X", image: "/assets/asusvivobook.webp",
+            id: "asus-vivobook-16x", brand: "Asus", name: "Vivobook Pro 16X", image: "assets/asusvivobook.webp",
             price: "EGP 52,000", priceVal: 52000,
             cpu: "Intel Core i7-13700H", cpuPower: 85,
             gpu: "RTX 4050 6GB", gpuPower: 65,
@@ -125,7 +125,7 @@ const laptopsData = {
     // ==========================================
     hp: [
         {
-            id: "hp-15-fd1024ne", brand: "HP", name: "HP 15-fd1024ne", image: "/assets/hpfe.webp",
+            id: "hp-15-fd1024ne", brand: "HP", name: "HP 15-fd1024ne", image: "assets/hpfe.webp",
             price: "EGP 28,000", priceVal: 28000,
             cpu: "Intel Core Ultra 5 125H", cpuPower: 72,
             gpu: "Intel Integrated", gpuPower: 25,
@@ -148,7 +148,7 @@ const laptopsData = {
             }
         },
         {
-            id: "hp-victus-15", brand: "HP", name: "Victus 15", image: "/assets/hpvictus.webp",
+            id: "hp-victus-15", brand: "HP", name: "Victus 15", image: "assets/hpvictus.webp",
             price: "EGP 40,000", priceVal: 40000,
             cpu: "Intel Core i5-13420H", cpuPower: 60,
             gpu: "RTX 3050 6GB", gpuPower: 50,
@@ -171,7 +171,7 @@ const laptopsData = {
             }
         },
         {
-            id: "hp-omen-16", brand: "HP", name: "Omen 16", image: "/assets/hpomen.webp",
+            id: "hp-omen-16", brand: "HP", name: "Omen 16", image: "assets/hpomen.webp",
             price: "EGP 72,000", priceVal: 72000,
             cpu: "Intel Core i7-13700HX", cpuPower: 95,
             gpu: "RTX 4060 8GB", gpuPower: 80,
@@ -194,7 +194,7 @@ const laptopsData = {
             }
         },
         {
-            id: "hp-pavilion-aero", brand: "HP", name: "Pavilion Aero 13", image: "/assets/hppavilion.webp",
+            id: "hp-pavilion-aero", brand: "HP", name: "Pavilion Aero 13", image: "assets/hppavilion.webp",
             price: "EGP 35,000", priceVal: 35000,
             cpu: "AMD Ryzen 5 8640U", cpuPower: 65,
             gpu: "Radeon Graphics", gpuPower: 30,
@@ -223,7 +223,7 @@ const laptopsData = {
     // ==========================================
     acer: [
         {
-            id: "acer-nitro-v15", brand: "Acer", name: "Nitro V 15", image: "/assets/acernitro.webp",
+            id: "acer-nitro-v15", brand: "Acer", name: "Nitro V 15", image: "assets/acernitro.webp",
             price: "EGP 42,000", priceVal: 42000,
             cpu: "Intel Core i5-13420H", cpuPower: 60,
             gpu: "RTX 4050 6GB", gpuPower: 65,
@@ -246,7 +246,7 @@ const laptopsData = {
             }
         },
         {
-            id: "acer-helios-neo-16", brand: "Acer", name: "Predator Helios Neo 16", image: "/assets/acerpredator.webp",
+            id: "acer-helios-neo-16", brand: "Acer", name: "Predator Helios Neo 16", image: "assets/acerpredator.webp",
             price: "EGP 65,000", priceVal: 65000,
             cpu: "Intel Core i7-13700HX", cpuPower: 95,
             gpu: "RTX 4060 8GB", gpuPower: 80,
@@ -269,7 +269,7 @@ const laptopsData = {
             }
         },
         {
-            id: "acer-aspire-5", brand: "Acer", name: "Aspire 5", image: "/assets/aceraspire.webp",
+            id: "acer-aspire-5", brand: "Acer", name: "Aspire 5", image: "assets/aceraspire.webp",
             price: "EGP 24,000", priceVal: 24000,
             cpu: "Intel Core i5-1335U", cpuPower: 50,
             gpu: "Intel Iris Xe", gpuPower: 20,
@@ -298,7 +298,7 @@ const laptopsData = {
     // ==========================================
     lenovo: [
         {
-            id: "lenovo-loq-15", brand: "Lenovo", name: "LOQ 15IRX9", image: "/assets/lenovoloq.webp",
+            id: "lenovo-loq-15", brand: "Lenovo", name: "LOQ 15IRX9", image: "assets/lenovoloq.webp",
             price: "EGP 48,000", priceVal: 48000,
             cpu: "Intel Core i7-13650HX", cpuPower: 90,
             gpu: "RTX 3050 6GB", gpuPower: 50,
@@ -321,7 +321,7 @@ const laptopsData = {
             }
         },
         {
-            id: "lenovo-legion-pro-5i", brand: "Lenovo", name: "Legion Pro 5i", image: "/assets/lenovolegion.webp",
+            id: "lenovo-legion-pro-5i", brand: "Lenovo", name: "Legion Pro 5i", image: "assets/lenovolegion.webp",
             price: "EGP 82,000", priceVal: 82000,
             cpu: "Intel Core i7-13700HX", cpuPower: 95,
             gpu: "RTX 4070 8GB", gpuPower: 90,
@@ -344,7 +344,7 @@ const laptopsData = {
             }
         },
         {
-            id: "lenovo-thinkpad-e14", brand: "Lenovo", name: "ThinkPad E14 Gen 5", image: "/assets/lenovothink.webp",
+            id: "lenovo-thinkpad-e14", brand: "Lenovo", name: "ThinkPad E14 Gen 5", image: "assets/lenovothink.webp",
             price: "EGP 42,000", priceVal: 42000,
             cpu: "Intel Core i7-1355U", cpuPower: 55,
             gpu: "Intel Iris Xe", gpuPower: 20,
@@ -367,7 +367,7 @@ const laptopsData = {
             }
         },
         {
-            id: "lenovo-yoga-pro-9i", brand: "Lenovo", name: "Yoga Pro 9i", image: "/assets/lenovoyoga.webp",
+            id: "lenovo-yoga-pro-9i", brand: "Lenovo", name: "Yoga Pro 9i", image: "assets/lenovoyoga.webp",
             price: "EGP 95,000", priceVal: 95000,
             cpu: "Intel Core i9-13905H", cpuPower: 94,
             gpu: "RTX 4060 8GB", gpuPower: 80,
@@ -390,7 +390,7 @@ const laptopsData = {
             }
         },
         {
-            id: "lenovo-ideapad-slim-5", brand: "Lenovo", name: "IdeaPad Slim 5", image: "/assets/lenovoidea.webp",
+            id: "lenovo-ideapad-slim-5", brand: "Lenovo", name: "IdeaPad Slim 5", image: "assets/lenovoidea.webp",
             price: "EGP 34,000", priceVal: 34000,
             cpu: "Intel Core i7-1355U", cpuPower: 55,
             gpu: "Intel Iris Xe", gpuPower: 20,
