@@ -21,27 +21,14 @@
     --color-button-secondary-text: #F0F6FC;
 
     --color-button-primary-border: #30363D;
-    --color-button-primary-bg-hover: #FFFFFF;
-    --color-button-primary-text-hover: #0D1117;
+    --color-button-primary-bg-hover: #ffffff00;
+    --color-button-primary-text-hover: #e7e9ec;
     --color-button-primary-border-hover: #8D96A0;
 
     --main-padd: 15px;
     --radius: 16px;
 }
 
-html {
-    scroll-behavior: smooth;
-    background-color: var(--color-background-main);
-}
-
-body {
-    font-family: "Ubuntu", sans-serif;
-    background-color: var(--color-background-main);
-    color: var(--color-text-primary);
-    overflow-x: hidden;
-    min-height: 100vh;
-    margin: 0;
-}
 
 .back {
     position: fixed;
@@ -64,6 +51,14 @@ body {
 .back:hover {
     background-color: var(--color-button-primary-bg-hover);
     color: var(--color-button-primary-text-hover);
+}
+
+@media (max-width: 767px) {
+    .back {
+        top: 10%;
+        padding: 5px 10px;
+        left: 10px;
+    }
 }
 
 
