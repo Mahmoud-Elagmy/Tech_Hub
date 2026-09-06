@@ -453,6 +453,7 @@ updateSavedCompares();
 if (close) {
     close.addEventListener("click", () => {
         popup.classList.remove("active");
+        document.body.style.overflow = "auto";
     });
 }
 
@@ -509,10 +510,6 @@ box.forEach((b) => {
                 `;
                     popup.classList.add("active");
                     document.body.style.overflow = "hidden";
-                    close.onclick = () => {
-                        popup.classList.remove("active");
-                        document.body.style.overflow = "auto";
-                    };
                 }
             };
 
@@ -567,9 +564,7 @@ box.forEach((b) => {
 
                 let selectdLaptops = allLaptops.filter((l) => getSavedCompares().includes(l.id));
 
-                if (selectdLaptops.length > 0) {
-                    window.localStorage.setItem("objs", JSON.stringify(selectdLaptops));
-                }
+                window.localStorage.setItem("objs", JSON.stringify(selectdLaptops));
             }
             list.appendChild(card);
         }
@@ -579,9 +574,12 @@ box.forEach((b) => {
     });
 });
 
+let backBtn = document.querySelector(".back");
 
 
-
+backBtn.addEventListener("click", () => {
+    window.location.href = "index.html";
+});
 
 
 

@@ -29,6 +29,43 @@
     --radius: 16px;
 }
 
+html {
+    scroll-behavior: smooth;
+    background-color: var(--color-background-main);
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--color-background-main);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.back {
+    position: fixed;
+    top: 5%;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: var(--color-button-primary-bg);
+    color: var(--color-button-primary-text);
+    border-radius: var(--radius);
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--color-text-muted);
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.back i {
+    font-size: 1.25rem;
+}
+
+.back:hover {
+    background-color: var(--color-button-primary-bg-hover);
+    color: var(--color-button-primary-text-hover);
+}
+
 .content {
     padding-left: var(--main-padd);
     padding-right: var(--main-padd);

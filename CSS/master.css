@@ -47,6 +47,8 @@ body {
     background-color: var(--color-background-main);
     color: var(--color-text-primary);
     overflow-x: hidden;
+    min-height: 100vh;
+    margin: 0;
 }
 
 ul {
@@ -140,6 +142,39 @@ hr.active {
     }
 }
 
+.up {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: fixed;
+    top: 90%;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: var(--color-button-primary-bg);
+    color: var(--color-button-primary-text);
+    border-radius: var(--radius);
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--color-text-muted);
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.up.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.up i {
+    font-size: 1.25rem;
+}
+
+.up:hover {
+    background-color: var(--color-button-primary-bg-hover);
+    color: var(--color-button-primary-text-hover);
+    box-shadow: 0 0 10px var(--color-text-muted);
+}
+
 /* Start of Header */
 
 
@@ -190,7 +225,7 @@ header .container .logo {
 header .container nav {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 20px;
     width: 100%;
     padding-left: var(--main-padd);
     padding-right: var(--main-padd);

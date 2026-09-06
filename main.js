@@ -81,3 +81,24 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach((section) => {
     observer.observe(section);
 });
+
+let upBtn = document.querySelector(".up");
+
+let time = 0;
+window.addEventListener("scroll", () => {
+    if (time) return;
+
+    time = setTimeout(() => {
+        time = 0;
+        if (window.scrollY > 100) {
+            upBtn.classList.add("active");
+        }
+        else {
+            upBtn.classList.remove("active");
+        }
+    }, 100);
+});
+
+upBtn.onclick = () => {
+    window.scrollTo(0, 0);
+}
