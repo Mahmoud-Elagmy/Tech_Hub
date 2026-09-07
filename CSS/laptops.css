@@ -25,6 +25,10 @@
     --color-button-primary-text-hover: #e7e9ec;
     --color-button-primary-border-hover: #8D96A0;
 
+    /* Status */
+    --color-success: #3FB950;
+    --color-danger: #F85149;
+
     --main-padd: 15px;
     --radius: 16px;
 }
@@ -264,7 +268,7 @@
 }
 
 .popup.active .popupcard {
-    transform: scale(0.88) translateY(0);
+    transform: scale(0.8) translateY(0);
 }
 
 .close {
@@ -338,7 +342,7 @@
 .error {
     display: none;
     transition: all 0.3s ease-in-out;
-    color: #F0060C;
+    color: var(--color-danger);
     background-color: var(--color-surface-card);
     padding: 15px;
     border-radius: var(--radius);

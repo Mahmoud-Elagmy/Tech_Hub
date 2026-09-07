@@ -20,6 +20,7 @@ grid.style.gridTemplateColumns = `repeat(${objs.length}, minmax(200px, 1fr))`;
 if (objs.length == 0) {
     grid.innerHTML = `<h2>Nothing to compare</h2>`;
 }
+
 else {
     grid.innerHTML = objs.map((l) => `
     <div class="col">
@@ -30,6 +31,7 @@ else {
     <div class="item cpu"><span>CPU: </span><span>${l.cpu}</span><span>?</span><span>${l.specDetails.cpu}</span></div>
     <div class="item gpu"><span>GPU: </span><span>${l.gpu}</span><span>?</span><span>${l.specDetails.gpu}</span></div>
     <div class="item ram"><span>RAM: </span><span>${l.ram}</span><span>?</span><span>${l.specDetails.ram}</span></div>
+    <div class="item"><span>RAM Upgrade: </span><span>${l.ramUpgrade}</span></div>
     <div class="item storage"><span>Storage: </span><span>${l.storage}</span><span>?</span><span>${l.specDetails.storage}</span></div>
     <div class="item dis"><span>Display: </span><span>${l.display}</span><span>?</span><span>${l.specDetails.display}</span></div>
     <div class="item batt"><span>Battery: </span><span>${l.battery}</span><span>?</span><span>${l.specDetails.battery}</span></div>
@@ -37,6 +39,7 @@ else {
     <div class="item weight"><span>Weight: </span><span>${l.weight}</span></div>
     <div class="item"><span>Use Cases: </span><span>${l.useCases.join("<br><br>")}</span></div>
     <div class="item"><span>Problems: </span><span>${l.problems.join("<br><br>")}</span></div>
+    <div class="item"><span>Notes:</span><span>${l.hiddenNotes.join("<br><br>")}</span></div>
     </div>
     `).join("");
 };
@@ -246,3 +249,4 @@ let backBtn = document.querySelector(".back");
 backBtn.addEventListener("click", () => {
     window.location.href = "laptops.html";
 });
+

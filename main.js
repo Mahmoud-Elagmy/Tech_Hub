@@ -61,10 +61,9 @@ images(imgPc);
 let hr = document.querySelectorAll("hr");
 
 let Lap = document.querySelector(".laptops");
-let Pc = document.querySelector(".pc");
 let about = document.querySelector(".about");
 
-let sections = [Lap, Pc, about];
+let sections = [Lap, about];
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

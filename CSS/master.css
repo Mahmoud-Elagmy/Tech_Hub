@@ -38,6 +38,10 @@ html {
     --color-button-primary-text-hover: #e7e9ec;
     --color-button-primary-border-hover: #8D96A0;
 
+    /* Status */
+    --color-success: #3FB950;
+    --color-danger: #F85149;
+
     --main-padd: 15px;
     --radius: 16px;
 }
@@ -509,15 +513,13 @@ header .container nav ul li a:focus {
 
 /* Start of content */
 
-.laptops,
-.pc {
+.laptops {
     padding-left: var(--main-padd);
     padding-right: var(--main-padd);
     position: relative;
 }
 
-.laptops .container,
-.pc .container {
+.laptops .container {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -527,8 +529,7 @@ header .container nav ul li a:focus {
     gap: 40px;
 }
 
-.laptops .text,
-.pc .text {
+.laptops .text {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -539,15 +540,13 @@ header .container nav ul li a:focus {
 
 
 
-.laptops .text p,
-.pc .text p {
+.laptops .text p {
     font-size: 1.25rem;
     color: var(--color-text-secondary);
     line-height: 1.5;
 }
 
-.laptops .text form .btn,
-.pc .text form .btn {
+.laptops .text form .btn {
     position: relative;
     background-color: var(--color-button-primary-bg);
     color: var(--color-button-primary-text);
@@ -559,8 +558,7 @@ header .container nav ul li a:focus {
     transition: all 0.3s ease-in-out;
 }
 
-.laptops .text form .btn::before,
-.pc .text form .btn::before {
+.laptops .text form .btn::before {
     content: "";
     position: absolute;
     top: 0;
@@ -572,8 +570,7 @@ header .container nav ul li a:focus {
     animation: border-top 3s ease-in-out infinite alternate;
 }
 
-.laptops .text form .btn::after,
-.pc .text form .btn::after {
+.laptops .text form .btn::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -640,33 +637,28 @@ header .container nav ul li a:focus {
     }
 }
 
-.laptops .text form .btn:hover,
-.pc .text form .btn:hover {
+.laptops .text form .btn:hover {
     background-color: var(--color-button-secondary-bg);
     color: var(--color-button-secondary-text);
     box-shadow: 0 0 5px var(--color-text-muted);
 }
 
-.laptops .text form .btn:hover::before,
-.pc .text form .btn:hover::before {
+.laptops .text form .btn:hover::before {
     animation: none;
     opacity: 0;
 }
 
-.laptops .text form .btn:hover::after,
-.pc .text form .btn:hover::after {
+.laptops .text form .btn:hover::after {
     animation: none;
     opacity: 0;
 }
 
-.laptops .image,
-.pc .image {
+.laptops .image {
     flex: 1;
     position: relative;
 }
 
-.laptops .image,
-.pc .image {
+.laptops .image {
     flex: 1;
     position: relative;
 }
@@ -687,8 +679,7 @@ header .container nav ul li a:focus {
     transition: all 0.8s ease-in-out;
 }
 
-.laptops .image img.active,
-.pc .image img.active {
+.laptops .image img.active {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -696,8 +687,7 @@ header .container nav ul li a:focus {
     transition: all 0.5s ease-in-out;
 }
 
-.laptops .image img.active:hover,
-.pc .image img.active:hover {
+.laptops .image img.active:hover {
     transform: translate(0, -10px);
     box-shadow: 20px 10px 10px var(--color-text-muted);
 }
@@ -705,8 +695,7 @@ header .container nav ul li a:focus {
 
 @media (max-width: 767px) {
 
-    .laptops .container,
-    .pc .container {
+    .laptops .container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -715,18 +704,15 @@ header .container nav ul li a:focus {
         padding-bottom: 50px;
     }
 
-    .laptops .text,
-    .pc .text {
+    .laptops .text {
         align-items: center;
     }
 
-    .laptops .text h2,
-    .pc .text h2 {
+    .laptops .text h2 {
         font-size: 50px;
     }
 
-    .laptops .image,
-    .pc .image {
+    .laptops .image {
         width: 100%;
         min-height: 320px;
         display: flex;
@@ -756,9 +742,9 @@ header .container nav ul li a:focus {
 
 
 .about .container p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--color-text-secondary);
-    line-height: 1.5;
+    line-height: 1.8;
     max-width: 800px;
     letter-spacing: 1.5px;
 }
@@ -952,6 +938,10 @@ header .container nav ul li a:focus {
 
     .contact .container .text {
         align-items: center;
+    }
+
+    .contact .container .icons {
+        margin-bottom: 30px;
     }
 
     .contact .container form input {
