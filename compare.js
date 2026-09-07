@@ -63,11 +63,19 @@ if (!objs[0]) objs[0] = { priceVal: Infinity, weightVal: Infinity, storageVal: -
 if (!objs[1]) objs[1] = { priceVal: Infinity, weightVal: Infinity, storageVal: -1, displayScore: -1, ramVal: -1, cpuPower: -1, gpuPower: -1, batteryVal: -1 };
 if (!objs[2]) objs[2] = { priceVal: Infinity, weightVal: Infinity, storageVal: -1, displayScore: -1, ramVal: -1, cpuPower: -1, gpuPower: -1, batteryVal: -1 };
 
-// Ensure col1 actually exists before trying to loop through it
+function compare(el1, el2, el3, type, values) {
+    const nums = values.map((value) => Number(value) || 0);
+    let minValue;
+    if (type == "price" || type == "weight") minValue = Math.min(...nums);
+    else minValue = Math.max(...nums);
+    [el1, el2, el3].forEach((el, index) => {
+        if (!el) return;
+        el.style.color = nums[index] === minValue ? "green" : "";
+    });
+};
+
 if (col1) {
     for (let i = 0; i < col1.children.length; ++i) {
-
-        // Safely declare variables: If the column doesn't exist, return null instead of crashing
         let el1 = col1 ? col1.children[i] : null;
         let el2 = col2 ? col2.children[i] : null;
         let el3 = col3 ? col3.children[i] : null;
@@ -75,172 +83,28 @@ if (col1) {
         if (!el1) continue;
 
         if (el1.classList.contains("price")) {
-            let p1 = objs[0].priceVal;
-            let p2 = objs[1].priceVal;
-            let p3 = objs[2].priceVal;
-
-            if (p1 <= p2 && p1 <= p3) {
-                if (el1) el1.style.color = "green";
-                if (p1 == p2 && el2) el2.style.color = "green";
-                if (p1 == p3 && el3) el3.style.color = "green";
-            }
-            else if (p2 <= p1 && p2 <= p3) {
-                if (el2) el2.style.color = "green";
-                if (p2 == p1 && el1) el1.style.color = "green";
-                if (p2 == p3 && el3) el3.style.color = "green";
-            }
-            else if (p3 <= p1 && p3 <= p2) {
-                if (el3) el3.style.color = "green";
-                if (p3 == p1 && el1) el1.style.color = "green";
-                if (p3 == p2 && el2) el2.style.color = "green";
-            }
+            compare(el1, el2, el3, "price", [objs[0]?.priceVal ?? Infinity, objs[1]?.priceVal ?? Infinity, objs[2]?.priceVal ?? Infinity]);
         }
         else if (el1.classList.contains("weight")) {
-            let w1 = objs[0].weightVal;
-            let w2 = objs[1].weightVal;
-            let w3 = objs[2].weightVal;
-
-            if (w1 <= w2 && w1 <= w3) {
-                if (el1) el1.style.color = "green";
-                if (w1 == w2 && el2) el2.style.color = "green";
-                if (w1 == w3 && el3) el3.style.color = "green";
-            }
-            else if (w2 <= w1 && w2 <= w3) {
-                if (el2) el2.style.color = "green";
-                if (w2 == w1 && el1) el1.style.color = "green";
-                if (w2 == w3 && el3) el3.style.color = "green";
-            }
-            else if (w3 <= w1 && w3 <= w2) {
-                if (el3) el3.style.color = "green";
-                if (w3 == w1 && el1) el1.style.color = "green";
-                if (w3 == w2 && el2) el2.style.color = "green";
-            }
+            compare(el1, el2, el3, "weight", [objs[0]?.weightVal ?? Infinity, objs[1]?.weightVal ?? Infinity, objs[2]?.weightVal ?? Infinity]);
         }
         else if (el1.classList.contains("storage")) {
-            let s1 = objs[0].storageVal;
-            let s2 = objs[1].storageVal;
-            let s3 = objs[2].storageVal;
-
-            if (s1 >= s2 && s1 >= s3) {
-                if (el1) el1.style.color = "green";
-                if (s1 == s2 && el2) el2.style.color = "green";
-                if (s1 == s3 && el3) el3.style.color = "green";
-            }
-            else if (s2 >= s1 && s2 >= s3) {
-                if (el2) el2.style.color = "green";
-                if (s2 == s1 && el1) el1.style.color = "green";
-                if (s2 == s3 && el3) el3.style.color = "green";
-            }
-            else if (s3 >= s1 && s3 >= s2) {
-                if (el3) el3.style.color = "green";
-                if (s3 == s1 && el1) el1.style.color = "green";
-                if (s3 == s2 && el2) el2.style.color = "green";
-            }
+            compare(el1, el2, el3, "storage", [objs[0]?.storageVal ?? -1, objs[1]?.storageVal ?? -1, objs[2]?.storageVal ?? -1]);
         }
         else if (el1.classList.contains("dis")) {
-            let d1 = objs[0].displayScore;
-            let d2 = objs[1].displayScore;
-            let d3 = objs[2].displayScore;
-
-            if (d1 >= d2 && d1 >= d3) {
-                if (el1) el1.style.color = "green";
-                if (d1 == d2 && el2) el2.style.color = "green";
-                if (d1 == d3 && el3) el3.style.color = "green";
-            }
-            else if (d2 >= d1 && d2 >= d3) {
-                if (el2) el2.style.color = "green";
-                if (d2 == d1 && el1) el1.style.color = "green";
-                if (d2 == d3 && el3) el3.style.color = "green";
-            }
-            else if (d3 >= d1 && d3 >= d2) {
-                if (el3) el3.style.color = "green";
-                if (d3 == d1 && el1) el1.style.color = "green";
-                if (d3 == d2 && el2) el2.style.color = "green";
-            }
+            compare(el1, el2, el3, "display", [objs[0]?.displayScore ?? -1, objs[1]?.displayScore ?? -1, objs[2]?.displayScore ?? -1]);
         }
         else if (el1.classList.contains("ram")) {
-            let r1 = objs[0].ramVal;
-            let r2 = objs[1].ramVal;
-            let r3 = objs[2].ramVal;
-
-            if (r1 >= r2 && r1 >= r3) {
-                if (el1) el1.style.color = "green";
-                if (r1 == r2 && el2) el2.style.color = "green";
-                if (r1 == r3 && el3) el3.style.color = "green";
-            }
-            else if (r2 >= r1 && r2 >= r3) {
-                if (el2) el2.style.color = "green";
-                if (r2 == r1 && el1) el1.style.color = "green";
-                if (r2 == r3 && el3) el3.style.color = "green";
-            }
-            else if (r3 >= r1 && r3 >= r2) {
-                if (el3) el3.style.color = "green";
-                if (r3 == r1 && el1) el1.style.color = "green";
-                if (r3 == r2 && el2) el2.style.color = "green";
-            }
+            compare(el1, el2, el3, "ram", [objs[0]?.ramVal ?? -1, objs[1]?.ramVal ?? -1, objs[2]?.ramVal ?? -1]);
         }
         else if (el1.classList.contains("cpu")) {
-            let c1 = objs[0].cpuPower;
-            let c2 = objs[1].cpuPower;
-            let c3 = objs[2].cpuPower;
-
-            if (c1 >= c2 && c1 >= c3) {
-                if (el1) el1.style.color = "green";
-                if (c1 == c2 && el2) el2.style.color = "green";
-                if (c1 == c3 && el3) el3.style.color = "green";
-            }
-            else if (c2 >= c1 && c2 >= c3) {
-                if (el2) el2.style.color = "green";
-                if (c2 == c1 && el1) el1.style.color = "green";
-                if (c2 == c3 && el3) el3.style.color = "green";
-            }
-            else if (c3 >= c1 && c3 >= c2) {
-                if (el3) el3.style.color = "green";
-                if (c3 == c1 && el1) el1.style.color = "green";
-                if (c3 == c2 && el2) el2.style.color = "green";
-            }
+            compare(el1, el2, el3, "cpu", [objs[0]?.cpuPower ?? -1, objs[1]?.cpuPower ?? -1, objs[2]?.cpuPower ?? -1]);
         }
         else if (el1.classList.contains("gpu")) {
-            let g1 = objs[0].gpuPower;
-            let g2 = objs[1].gpuPower;
-            let g3 = objs[2].gpuPower;
-
-            if (g1 >= g2 && g1 >= g3) {
-                if (el1) el1.style.color = "green";
-                if (g1 == g2 && el2) el2.style.color = "green";
-                if (g1 == g3 && el3) el3.style.color = "green";
-            }
-            else if (g2 >= g1 && g2 >= g3) {
-                if (el2) el2.style.color = "green";
-                if (g2 == g1 && el1) el1.style.color = "green";
-                if (g2 == g3 && el3) el3.style.color = "green";
-            }
-            else if (g3 >= g1 && g3 >= g2) {
-                if (el3) el3.style.color = "green";
-                if (g3 == g1 && el1) el1.style.color = "green";
-                if (g3 == g2 && el2) el2.style.color = "green";
-            }
+            compare(el1, el2, el3, "gpu", [objs[0]?.gpuPower ?? -1, objs[1]?.gpuPower ?? -1, objs[2]?.gpuPower ?? -1]);
         }
         else if (el1.classList.contains("batt")) {
-            let b1 = objs[0].batteryVal;
-            let b2 = objs[1].batteryVal;
-            let b3 = objs[2].batteryVal;
-
-            if (b1 >= b2 && b1 >= b3) {
-                if (el1) el1.style.color = "green";
-                if (b1 == b2 && el2) el2.style.color = "green";
-                if (b1 == b3 && el3) el3.style.color = "green";
-            }
-            else if (b2 >= b1 && b2 >= b3) {
-                if (el2) el2.style.color = "green";
-                if (b2 == b1 && el1) el1.style.color = "green";
-                if (b2 == b3 && el3) el3.style.color = "green";
-            }
-            else if (b3 >= b1 && b3 >= b2) {
-                if (el3) el3.style.color = "green";
-                if (b3 == b1 && el1) el1.style.color = "green";
-                if (b3 == b2 && el2) el2.style.color = "green";
-            }
+            compare(el1, el2, el3, "battery", [objs[0]?.batteryVal ?? -1, objs[1]?.batteryVal ?? -1, objs[2]?.batteryVal ?? -1]);
         }
     }
 }
