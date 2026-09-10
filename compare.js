@@ -49,22 +49,30 @@ let icons = document.querySelectorAll(".item span:nth-child(3)");
 for (let i of icons) {
     let time;
     i.onclick = () => {
-        let par=i.parentElement;
-        let c=i.closest(".col");
+        let par = i.parentElement;
+        let c = i.closest(".col");
         if (i.classList.contains("active")) {
             clearTimeout(time);
             i.classList.remove("active");
-            par.style.zIndex="";
-            c.style.zIndex="";
+            par.style.zIndex = "";
+            c.style.zIndex = "";
             return;
         }
+        icons.forEach((icon) => {
+            if (icon !== i && icon.classList.contains("active")) {
+                icon.classList.remove("active");
+                icon.parentElement.style.zIndex = "";
+                icon.closest(".col").style.zIndex = "";
+            }
+        });
+        clearTimeout(time);
         i.classList.add("active");
-        par.style.zIndex="999";
-        c.style.zIndex="999";
+        par.style.zIndex = "999";
+        c.style.zIndex = "999";
         time = setTimeout(() => {
             i.classList.remove("active");
-            par.style.zIndex="";
-            c.style.zIndex="";
+            par.style.zIndex = "";
+            c.style.zIndex = "";
         }, 4000);
     };
 };
