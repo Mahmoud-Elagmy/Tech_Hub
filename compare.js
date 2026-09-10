@@ -39,6 +39,7 @@ else {
     <div class="item batt"><span>Battery: </span><span>${l.battery}</span><span>?</span><span>${l.specDetails.battery}</span></div>
     <div class="item"><span>Ports: </span><span>${l.ports}</span></div>
     <div class="item weight"><span>Weight: </span><span>${l.weight}</span></div>
+    <div class="item material"><span>Material: </span><span>${l.material}</span></div>
     <div class="item"><span>Use Cases: </span><span>${l.useCases.join("<br><br>")}</span></div>
     <div class="item"><span>Problems: </span><span>${l.problems.join("<br><br>")}</span></div>
     <div class="item"><span>Notes:</span><span>${l.hiddenNotes.join("<br><br>")}</span></div>
