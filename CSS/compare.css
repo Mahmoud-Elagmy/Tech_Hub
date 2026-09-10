@@ -95,6 +95,7 @@
     border-radius: var(--radius);
     box-shadow: 0 0 5px var(--color-button-secondary-text);
     transition: all 0.3s ease-in-out;
+    position: relative;
 }
 
 @keyframes fade-in {
@@ -115,6 +116,25 @@
     height: 180px;
 }
 
+.col .remove {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--color-button-primary-bg);
+    color: var(--color-button-primary-text);
+    border: 2px solid var(--color-button-primary-border);
+    padding: 5px 10px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.col .remove:hover {
+    background-color: var(--color-button-primary-bg-hover);
+    color: var(--color-button-primary-text-hover);
+    border: 2px solid var(--color-button-primary-border-hover);
+}
 
 .col p:nth-of-type(1) {
     font-size: 1.2rem;
@@ -211,6 +231,13 @@
     .compare {
         display: flex;
         flex-direction: column;
+    }
+
+    .col .remove {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        top: 10px;
+        left: 10px;
     }
 
     .item {

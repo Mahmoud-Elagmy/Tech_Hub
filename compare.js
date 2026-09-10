@@ -24,6 +24,8 @@ if (objs.length == 0) {
 else {
     grid.innerHTML = objs.map((l) => `
     <div class="col">
+    <button type="button" class="remove">Remove</button>
+    <p class="id" style="display: none">${l.id}</p>
     <img src="${l.image}" alt="${l.name}">
     <h2>${l.name}</h2>
     <p>${l.brand}</p>
@@ -43,6 +45,29 @@ else {
     </div>
     `).join("");
 };
+
+let remove = document.querySelectorAll(".remove");
+
+for (let r of remove) {
+    r.onclick = () => {
+        r.parentElement.remove();
+        let objs = JSON.parse(localStorage.getItem("objs"));
+        for (let o of objs) {
+            if (o.name == r.parentElement.querySelector("h2").textContent) {
+                objs.splice(objs.indexOf(o), 1);
+                localStorage.setItem("objs", JSON.stringify(objs));
+            }
+        }
+        let comps = JSON.parse(localStorage.getItem("compare"));
+        for (let c of comps) {
+            if (c == r.parentElement.querySelector(".id").textContent) {
+                comps.splice(comps.indexOf(c), 1);
+                localStorage.setItem("compare", JSON.stringify(comps));
+            }
+        }
+        window.location.reload();
+    }
+}
 
 let icons = document.querySelectorAll(".item span:nth-child(3)");
 
