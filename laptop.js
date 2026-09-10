@@ -495,12 +495,6 @@ if (close) {
     });
 }
 
-if (popup) {
-    popup.addEventListener("click", () => {
-        popup.classList.remove("active");
-    });
-}
-
 if (compareBtn) {
     compareBtn.onclick = () => {
         window.location.href = "compare.html";

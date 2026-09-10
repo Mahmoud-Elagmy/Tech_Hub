@@ -46,13 +46,28 @@ else {
 
 let icons = document.querySelectorAll(".item span:nth-child(3)");
 
-let text = document.querySelectorAll(".item span:nth-child(4)");
-
 for (let i of icons) {
+    let time;
     i.onclick = () => {
-        i.classList.toggle("active");
-    }
-}
+        let par=i.parentElement;
+        let c=i.closest(".col");
+        if (i.classList.contains("active")) {
+            clearTimeout(time);
+            i.classList.remove("active");
+            par.style.zIndex="";
+            c.style.zIndex="";
+            return;
+        }
+        i.classList.add("active");
+        par.style.zIndex="999";
+        c.style.zIndex="999";
+        time = setTimeout(() => {
+            i.classList.remove("active");
+            par.style.zIndex="";
+            c.style.zIndex="";
+        }, 4000);
+    };
+};
 
 let col1 = grid.children[0];
 let col2 = grid.children[1];
@@ -113,4 +128,3 @@ let backBtn = document.querySelector(".back");
 backBtn.addEventListener("click", () => {
     window.location.href = "laptops.html";
 });
-
