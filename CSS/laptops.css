@@ -241,12 +241,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-}
-
-@media (max-width: 767px) {
-    .popupcontent {
-        flex-direction: column;
-    }
+    padding: 5px;
 }
 
 .popupcontent .left img {
@@ -271,6 +266,26 @@
     transform: scale(0.8) translateY(0);
 }
 
+@media (max-width:767px) {
+    .popup.active .popupcard {
+        max-height: 125vh;
+        overflow-y: auto;
+        transform: scale(0.7) translateY(0);
+    }
+
+    .popupcontent {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .popupcontent .left img {
+        display: none;
+    }
+}
+
+
 .close {
     position: absolute;
     top: 20px;
@@ -282,6 +297,7 @@
     border: none;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    z-index: 9999;
 }
 
 .close:hover {
