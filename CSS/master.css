@@ -513,13 +513,15 @@ header .container nav ul li a:focus {
 
 /* Start of content */
 
-.laptops {
+.laptops,
+.agenda {
     padding-left: var(--main-padd);
     padding-right: var(--main-padd);
     position: relative;
 }
 
-.laptops .container {
+.laptops .container,
+.agenda .container {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -529,7 +531,8 @@ header .container nav ul li a:focus {
     gap: 40px;
 }
 
-.laptops .text {
+.laptops .text,
+.agenda .text {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -540,13 +543,15 @@ header .container nav ul li a:focus {
 
 
 
-.laptops .text p {
+.laptops .text p,
+.agenda .text p {
     font-size: 1.25rem;
     color: var(--color-text-secondary);
     line-height: 1.5;
 }
 
-.laptops .text form .btn {
+.laptops .text form .btn,
+.agenda .text form .btn {
     position: relative;
     background-color: var(--color-button-primary-bg);
     color: var(--color-button-primary-text);
@@ -558,7 +563,8 @@ header .container nav ul li a:focus {
     transition: all 0.3s ease-in-out;
 }
 
-.laptops .text form .btn::before {
+.laptops .text form .btn::before,
+.agenda .text form .btn::before {
     content: "";
     position: absolute;
     top: 0;
@@ -570,7 +576,8 @@ header .container nav ul li a:focus {
     animation: border-top 3s ease-in-out infinite alternate;
 }
 
-.laptops .text form .btn::after {
+.laptops .text form .btn::after,
+.agenda .text form .btn::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -637,28 +644,33 @@ header .container nav ul li a:focus {
     }
 }
 
-.laptops .text form .btn:hover {
+.laptops .text form .btn:hover,
+.agenda .text form .btn:hover {
     background-color: var(--color-button-secondary-bg);
     color: var(--color-button-secondary-text);
     box-shadow: 0 0 5px var(--color-text-muted);
 }
 
-.laptops .text form .btn:hover::before {
+.laptops .text form .btn:hover::before,
+.agenda .text form .btn:hover::before {
     animation: none;
     opacity: 0;
 }
 
-.laptops .text form .btn:hover::after {
+.laptops .text form .btn:hover::after,
+.agenda .text form .btn:hover::after {
     animation: none;
     opacity: 0;
 }
 
-.laptops .image {
+.laptops .image,
+.agenda .image {
     flex: 1;
     position: relative;
 }
 
-.laptops .image {
+.laptops .image,
+.agenda .image {
     flex: 1;
     position: relative;
 }
@@ -679,7 +691,9 @@ header .container nav ul li a:focus {
     transition: all 0.8s ease-in-out;
 }
 
-.laptops .image img.active {
+.laptops .image img.active,
+.agenda .image img.active {
+    position: relative;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -687,7 +701,8 @@ header .container nav ul li a:focus {
     transition: all 0.5s ease-in-out;
 }
 
-.laptops .image img.active:hover {
+.laptops .image img.active:hover,
+.agenda .image img.active:hover {
     transform: translate(0, -10px);
     box-shadow: 20px 10px 10px var(--color-text-muted);
 }
@@ -695,7 +710,8 @@ header .container nav ul li a:focus {
 
 @media (max-width: 767px) {
 
-    .laptops .container {
+    .laptops .container,
+    .agenda .container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -704,15 +720,18 @@ header .container nav ul li a:focus {
         padding-bottom: 50px;
     }
 
-    .laptops .text {
+    .laptops .text,
+    .agenda .text {
         align-items: center;
     }
 
-    .laptops .text h2 {
-        font-size: 50px;
+    .laptops .text h2,
+    .agenda .text h2 {
+        font-size: 30px;
     }
 
-    .laptops .image {
+    .laptops .image,
+    .agenda .image {
         width: 100%;
         min-height: 320px;
         display: flex;

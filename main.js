@@ -44,7 +44,7 @@ burgerBtn.addEventListener("click", () => {
 });
 
 let imgLap = document.querySelectorAll(".laptops .image img");
-let imgPc = document.querySelectorAll(".pc .image img");
+let imgAgenda = document.querySelectorAll(".agenda .image img");
 function images(img) {
     if (img.length === 0) return;
     let cnt = 0;
@@ -56,14 +56,15 @@ function images(img) {
 };
 
 images(imgLap);
-images(imgPc);
+images(imgAgenda);
 
 let hr = document.querySelectorAll("hr");
 
 let Lap = document.querySelector(".laptops");
+let agenda = document.querySelector(".agenda");
 let about = document.querySelector(".about");
 
-let sections = [Lap, about];
+let sections = [Lap, agenda, about];
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

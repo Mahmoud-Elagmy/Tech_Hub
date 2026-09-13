@@ -3,10 +3,10 @@ const laptopsData = [
     // ASUS
     // ==========================================
     {
-        id: "asus-tuf-a15", brand: "Asus", name: "TUF Gaming A15 (FA507)", image: "assets/asustuf.webp",
+        id: "asus-tuf-a15", brand: "Asus", name: "TUF Gaming A15 (FA507)", productCode: "90NR0EB8-M003C0", image: "assets/asustuf.webp",
         price: "EGP 58,000", priceVal: 58000,
         cpu: "AMD Ryzen 7 7735HS (8 Cores / 16 Threads)", cpuPower: 78,
-        gpu: "RTX 4060 8GB (140W | AV1 Encode)", gpuPower: 82,
+        gpu: "RTX 4050 6GB (140W | AV1 Encode)", gpuPower: 72,
         ram: "16GB DDR5 4800MHz", ramVal: 16,
         ramUpgrade: "2x SO-DIMM slots (Both upgradeable, max 64GB)",
         storage: "1TB Gen4 NVMe SSD", storageVal: 1024,
@@ -15,7 +15,7 @@ const laptopsData = [
         ports: "USB4, 1x Type-C, 2x USB-A, HDMI 2.1 FRL",
         weight: "2.20 kg", weightVal: 2.2,
         material: "Aluminum display lid with high-durability polycarbonate plastic base",
-        hiddenNotes: ["The 140W GPU TGP means it squeezes every drop of performance out of the RTX 4060.", "Features Advanced Optimus to switch graphics without rebooting."],
+        hiddenNotes: ["The 140W GPU TGP means it squeezes every drop of performance out of the RTX 4050.", "Features Advanced Optimus to switch graphics without rebooting."],
         problems: ["The base 144Hz screen only covers ~62% sRGB (45% NTSC) and maxes out at 250 nits brightness, making colors look washed out.", "Cooling fans exceed 52dB on 'Turbo' mode, which is uncomfortably loud without a headset."],
         useCases: ["1080p AAA Gaming", "Engineering Students", "Budget 3D rendering"],
         specDetails: {
@@ -28,7 +28,7 @@ const laptopsData = [
         }
     },
     {
-        id: "asus-rog-g14", brand: "Asus", name: "ROG Zephyrus G14 (2024)", image: "assets/asusrog.webp",
+        id: "asus-rog-g14", brand: "Asus", name: "ROG Zephyrus G14 (2024)", productCode: "GA403UV-QS021W", image: "assets/asusrog.webp",
         price: "EGP 85,000", priceVal: 85000,
         cpu: "AMD Ryzen 9 8945HS (8 Cores / 16 Threads + NPU)", cpuPower: 92,
         gpu: "RTX 4070 8GB (90W | AV1 Encode)", gpuPower: 86,
@@ -53,7 +53,7 @@ const laptopsData = [
         }
     },
     {
-        id: "asus-strix-g16", brand: "Asus", name: "ROG Strix G16", image: "assets/asusrogflow.webp",
+        id: "asus-strix-g16", brand: "Asus", name: "ROG Strix G16", productCode: "G614JV-N3074W", image: "assets/asusrogflow.webp",
         price: "EGP 78,000", priceVal: 78000,
         cpu: "Intel Core i7-13650HX (14 Cores: 6P+8E)", cpuPower: 90,
         gpu: "RTX 4060 8GB (140W | AV1 Encode)", gpuPower: 82,
@@ -66,7 +66,7 @@ const laptopsData = [
         weight: "2.50 kg", weightVal: 2.5,
         material: "Aluminum display lid with a rigid plastic chassis and keyboard deck",
         hiddenNotes: ["Uses Asus's 'Tri-Fan' technology to pull air directly across the motherboard.", "Features a MUX switch to bypass the integrated GPU for a 10% gaming performance boost."],
-        problems: ["Notorious for 'Coil Whine' (a high-pitched electronic buzzing noise when the GPU is under load).", "Armoury Crate software is incredibly bloated and often causes system lag.", "Extremely bulky; the power brick itself weighs almost 1kg."],
+        problems: ["Widely reported on the ROG forums and in third-party reviews: 'coil whine', a high-pitched electronic buzzing noise when the GPU is under load.", "Armoury Crate software is incredibly bloated and often causes system lag.", "Extremely bulky; the power brick itself weighs almost 1kg."],
         useCases: ["Desktop Replacement", "Hardcore Esports", "Heavy Code Compilation"],
         specDetails: {
             cpu: "The 'HX' suffix indicates a hybrid desktop-class processor. It utilizes 6 Performance cores for gaming and 8 Efficiency cores for background tasks (20 Threads total).",
@@ -78,7 +78,7 @@ const laptopsData = [
         }
     },
     {
-        id: "asus-zenbook-14", brand: "Asus", name: "Zenbook 14 OLED", image: "assets/asuszenbook.webp",
+        id: "asus-zenbook-14", brand: "Asus", name: "Zenbook 14 OLED", productCode: "UX3405MA-PZ031W", image: "assets/asuszenbook.webp",
         price: "EGP 45,000", priceVal: 45000,
         cpu: "Intel Core Ultra 7 155H (16 Cores: 6P+8E+2LPE)", cpuPower: 82,
         gpu: "Intel Arc Graphics (Dual AV1 Codecs)", gpuPower: 38,
@@ -103,7 +103,7 @@ const laptopsData = [
         }
     },
     {
-        id: "asus-vivobook-16x", brand: "Asus", name: "Vivobook Pro 16X", image: "assets/asusvivobook.webp",
+        id: "asus-vivobook-16x", brand: "Asus", name: "Vivobook Pro 16X", productCode: "K6604JV-MX016W", image: "assets/asusvivobook.webp",
         price: "EGP 52,000", priceVal: 52000,
         cpu: "Intel Core i7-13700H (14 Cores: 6P+8E)", cpuPower: 85,
         gpu: "RTX 4050 6GB (65W | AV1 Encode)", gpuPower: 65,
@@ -132,7 +132,7 @@ const laptopsData = [
     // HP
     // ==========================================
     {
-        id: "hp-15-fd1024ne", brand: "HP", name: "HP 15 Essential", image: "assets/hpfe.webp",
+        id: "hp-15-fd1024ne", brand: "HP", name: "HP 15 Essential", productCode: "15-fd1003ca", image: "assets/hpfe.webp",
         price: "EGP 28,000", priceVal: 28000,
         cpu: "Intel Core Ultra 5 125H (14 Cores: 4P+8E+2LPE)", cpuPower: 72,
         gpu: "Intel Integrated (AV1 Decode)", gpuPower: 25,
@@ -157,7 +157,7 @@ const laptopsData = [
         }
     },
     {
-        id: "hp-victus-15", brand: "HP", name: "Victus 15 (2023)", image: "assets/hpvictus.webp",
+        id: "hp-victus-15", brand: "HP", name: "Victus 15 (2023)", productCode: "15-fa2013dx", image: "assets/hpvictus.webp",
         price: "EGP 40,000", priceVal: 40000,
         cpu: "Intel Core i5-13420H (8 Cores: 4P+4E)", cpuPower: 64,
         gpu: "RTX 3050 6GB (75W | NVENC Only)", gpuPower: 48,
@@ -182,20 +182,20 @@ const laptopsData = [
         }
     },
     {
-        id: "hp-omen-16", brand: "HP", name: "Omen 16 (2023)", image: "assets/hpomen.webp",
+        id: "hp-omen-16", brand: "HP", name: "Omen 16 (2023)", productCode: "76W28AV_1", image: "assets/hpomen.webp",
         price: "EGP 72,000", priceVal: 72000,
         cpu: "Intel Core i7-13700HX (16 Cores: 8P+8E)", cpuPower: 95,
         gpu: "RTX 4060 8GB (130W | AV1 Encode)", gpuPower: 81,
         ram: "16GB DDR5 4800MHz", ramVal: 16,
         ramUpgrade: "2x SO-DIMM slots (Both upgradeable, max 64GB)",
-        storage: "1TB Gen4 NVMe SSD", storageVal: 1024,
+        storage: "512GB Gen4 NVMe SSD", storageVal: 512,
         display: "16.1 QHD 240Hz (100% sRGB, G-Sync)", displayScore: 280,
         battery: "83Wh", batteryVal: 83,
         ports: "2x Thunderbolt 4, 2x USB-A, HDMI 2.1, RJ45",
         weight: "2.35 kg", weightVal: 2.35,
         material: "Aluminum keyboard deck and lid with a plastic bottom panel",
         hiddenNotes: ["Ports are heavily concentrated on the rear of the chassis to keep desk cables hidden.", "Features a glass trackpad, which feels significantly smoother than the plastic one on the Victus."],
-        problems: ["CRITICAL FLAW: Late 2023 models suffer from a widespread Hall-Sensor motherboard defect where the screen randomly goes black.", "HP Omen Gaming Hub forces background telemetry and bloatware."],
+        problems: ["Widely reported by owners on HP's own support forums: a motherboard sensor defect on late-2023 units can cause the screen to randomly go black and the keyboard to lock up under load.", "HP Omen Gaming Hub forces background telemetry and bloatware."],
         useCases: ["High-Framerate 1440p Gaming", "Machine Learning Local Hosting", "3D Animation"],
         specDetails: {
             cpu: "The i7-13700HX features 16 true cores and 24 threads, acting as a powerhouse for CPU-bound games like Microsoft Flight Simulator.",
@@ -207,7 +207,7 @@ const laptopsData = [
         }
     },
     {
-        id: "hp-pavilion-aero", brand: "HP", name: "Pavilion Aero 13", image: "assets/hppavilion.webp",
+        id: "hp-pavilion-aero", brand: "HP", name: "Pavilion Aero 13", productCode: "13-bg0010nr", image: "assets/hppavilion.webp",
         price: "EGP 35,000", priceVal: 35000,
         cpu: "AMD Ryzen 5 8640U (6 Cores / 12 Threads)", cpuPower: 65,
         gpu: "Radeon 760M Graphics (AV1 Codec)", gpuPower: 30,
@@ -236,7 +236,7 @@ const laptopsData = [
     // ACER
     // ==========================================
     {
-        id: "acer-nitro-v15", brand: "Acer", name: "Nitro V 15", image: "assets/acernitro.webp",
+        id: "acer-nitro-v15", brand: "Acer", name: "Nitro V 15", productCode: "NH.QNDEK.003", image: "assets/acernitro.webp",
         price: "EGP 42,000", priceVal: 42000,
         cpu: "Intel Core i5-13420H (8 Cores: 4P+4E)", cpuPower: 60,
         gpu: "RTX 4050 6GB (75W | AV1 Encode)", gpuPower: 66,
@@ -261,7 +261,7 @@ const laptopsData = [
         }
     },
     {
-        id: "acer-helios-neo-16", brand: "Acer", name: "Predator Helios Neo 16", image: "assets/acerpredator.webp",
+        id: "acer-helios-neo-16", brand: "Acer", name: "Predator Helios Neo 16", productCode: "NH.QLUEK.005", image: "assets/acerpredator.webp",
         price: "EGP 65,000", priceVal: 65000,
         cpu: "Intel Core i7-13700HX (16 Cores: 8P+8E)", cpuPower: 95,
         gpu: "RTX 4060 8GB (140W | AV1 Encode)", gpuPower: 82,
@@ -286,7 +286,7 @@ const laptopsData = [
         }
     },
     {
-        id: "acer-aspire-5", brand: "Acer", name: "Aspire 5", image: "assets/aceraspire.webp",
+        id: "acer-aspire-5", brand: "Acer", name: "Aspire 5", productCode: "NX.KHGEK.001", image: "assets/aceraspire.webp",
         price: "EGP 24,000", priceVal: 24000,
         cpu: "Intel Core i5-1335U (10 Cores: 2P+8E)", cpuPower: 50,
         gpu: "Intel Iris Xe (QuickSync Decode)", gpuPower: 20,
@@ -315,11 +315,11 @@ const laptopsData = [
     // LENOVO
     // ==========================================
     {
-        id: "lenovo-loq-15", brand: "Lenovo", name: "LOQ 15IRX9 (2024)", image: "assets/lenovoloq.webp",
+        id: "lenovo-loq-15", brand: "Lenovo", name: "LOQ 15IRX9 (2024)", productCode: "83DV009MUS", image: "assets/lenovoloq.webp",
         price: "EGP 48,000", priceVal: 48000,
-        cpu: "Intel Core i7-13650HX (14 Cores: 6P+8E)", cpuPower: 90,
-        gpu: "RTX 3050 6GB (95W | NVENC Only)", gpuPower: 52,
-        ram: "24GB DDR5 4800MHz", ramVal: 24,
+        cpu: "Intel Core i5-13450HX (10 Cores: 4P+6E)", cpuPower: 76,
+        gpu: "RTX 4060 8GB (105W | AV1 Encode)", gpuPower: 76,
+        ram: "16GB DDR5 4800MHz", ramVal: 16,
         ramUpgrade: "2x SO-DIMM slots (Both upgradeable, max 32GB)",
         storage: "512GB Gen4 SSD", storageVal: 512,
         display: "15.6 FHD 144Hz (100% sRGB, G-Sync)", displayScore: 144,
@@ -328,19 +328,19 @@ const laptopsData = [
         weight: "2.38 kg", weightVal: 2.38,
         material: "PC-ABS plastic chassis with matte finish",
         hiddenNotes: ["The LA1 AI chip dynamically adjusts fan speeds and CPU/GPU power routing in real time for optimal FPS.", "Supports 140W USB-C charging, so you can leave the heavy brick at home and use a GaN charger."],
-        problems: ["CRITICAL FLAW: Widespread global reports of the 2024 Intel HX motherboards dying entirely (DOA) due to power-delivery failures.", "Battery life is terrible due to the HX processor pairing with a small 60Wh battery."],
-        useCases: ["Risk-tolerant Budget Gamers", "Programming Local Servers", "Heavy Multitasking"],
+        problems: ["Widely reported by owners on Lenovo's community forums: some 2024 Intel HX-configured units fail to power on entirely after a BIOS update, tied to power-delivery issues.", "Battery life is mediocre due to the HX-class processor pairing with a small 60Wh battery."],
+        useCases: ["Budget 1080p Gaming", "Programming Local Servers", "Heavy Multitasking"],
         specDetails: {
-            cpu: "An unusually powerful 14-core processor for this price range, designed to brute-force CPU-heavy physics calculations.",
-            gpu: "The 95W RTX 3050 is pushed to its absolute physical limits here, though it lacks hardware AV1 encoding.",
-            ram: "24GB is an asymmetrical but highly practical setup, allowing heavy Docker container hosting and virtual machines.",
+            cpu: "A capable 10-core hybrid processor for this price range, handling CPU-heavy physics calculations without much throttling.",
+            gpu: "The 105W RTX 4060 is pushed close to its practical limits here, including hardware AV1 encoding for streaming.",
+            ram: "16GB DDR5 is a comfortable baseline, upgradeable to 32GB across two SODIMM slots.",
             storage: "Includes a second Gen 4 M.2 slot for cheap storage expansion.",
             display: "300 nits brightness and 100% sRGB color gamut make this an unexpectedly fantastic, color-accurate screen for the price.",
             battery: "Expect less than 3 hours of basic web browsing on battery power."
         }
     },
     {
-        id: "lenovo-legion-pro-5i", brand: "Lenovo", name: "Legion Pro 5i Gen 8", image: "assets/lenovolegion.webp",
+        id: "lenovo-legion-pro-5i", brand: "Lenovo", name: "Legion Pro 5i Gen 8", productCode: "82WK000CUK", image: "assets/lenovolegion.webp",
         price: "EGP 82,000", priceVal: 82000,
         cpu: "Intel Core i7-13700HX (16 Cores: 8P+8E)", cpuPower: 95,
         gpu: "RTX 4070 8GB (140W | AV1 Encode)", gpuPower: 90,
@@ -365,7 +365,7 @@ const laptopsData = [
         }
     },
     {
-        id: "lenovo-thinkpad-e14", brand: "Lenovo", name: "ThinkPad E14 Gen 5", image: "assets/lenovothink.webp",
+        id: "lenovo-thinkpad-e14", brand: "Lenovo", name: "ThinkPad E14 Gen 5", productCode: "21JK0003UK", image: "assets/lenovothink.webp",
         price: "EGP 42,000", priceVal: 42000,
         cpu: "Intel Core i7-1355U (10 Cores: 2P+8E)", cpuPower: 55,
         gpu: "Intel Iris Xe (QuickSync Decode)", gpuPower: 20,
@@ -390,7 +390,7 @@ const laptopsData = [
         }
     },
     {
-        id: "lenovo-yoga-pro-9i", brand: "Lenovo", name: "Yoga Pro 9i", image: "assets/lenovoyoga.webp",
+        id: "lenovo-yoga-pro-9i", brand: "Lenovo", name: "Yoga Pro 9i", productCode: "83BA0000UK", image: "assets/lenovoyoga.webp",
         price: "EGP 95,000", priceVal: 95000,
         cpu: "Intel Core i9-13905H (14 Cores: 6P+8E)", cpuPower: 94,
         gpu: "RTX 4060 8GB (100W | AV1 Encode)", gpuPower: 75,
@@ -415,7 +415,7 @@ const laptopsData = [
         }
     },
     {
-        id: "lenovo-ideapad-slim-5", brand: "Lenovo", name: "IdeaPad Slim 5", image: "assets/lenovoidea.webp",
+        id: "lenovo-ideapad-slim-5", brand: "Lenovo", name: "IdeaPad Slim 5", productCode: "82XW000MUK", image: "assets/lenovoidea.webp",
         price: "EGP 34,000", priceVal: 34000,
         cpu: "Intel Core i7-1355U (10 Cores: 2P+8E)", cpuPower: 55,
         gpu: "Intel Iris Xe (QuickSync Decode)", gpuPower: 20,
@@ -439,14 +439,15 @@ const laptopsData = [
             battery: "56Wh provides solid all-day usage thanks to the low-power CPU."
         }
     }
-];;
-let box = document.querySelectorAll(".box");
+];
+let box = document.querySelectorAll(".brands .container .content .box");
 let list = document.querySelector(".list");
 let popup = document.querySelector(".popup");
 let popupContent = document.querySelector(".popupcontent");
 let close = document.querySelector(".close");
 let error = document.querySelector(".error");
 let compareBtn = document.querySelector(".compare");
+
 
 
 function getSavedCompares() {
@@ -493,13 +494,14 @@ if (compareBtn) {
     }
 }
 
+
+
 box.forEach((b) => {
     b.addEventListener("click", () => {
         box.forEach((bx) => {
             bx.classList.remove("active");
         })
 
-        b.classList.add("active");
         let selectd = b.children[1].textContent.toLowerCase();
         let activeList = laptopsData.filter((l) => l.brand.toLowerCase() === selectd);
         list.innerHTML = ``;
@@ -547,6 +549,7 @@ box.forEach((b) => {
                 }
             };
 
+
             cmp.onmouseleave = () => {
                 if (getSavedCompares().includes(id)) {
                     update(cmp, getSavedCompares().includes(id));
@@ -555,7 +558,6 @@ box.forEach((b) => {
             cmp.onclick = (e) => {
                 e.stopPropagation();
                 let savedCompares = getSavedCompares();
-                console.log(savedCompares);
                 let idx = savedCompares.indexOf(id);
                 if (idx !== -1) {
                     savedCompares.splice(idx, 1);

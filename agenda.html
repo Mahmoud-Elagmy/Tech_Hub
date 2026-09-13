@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Hub</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/master.css">
+    <link rel="stylesheet" href="CSS/agenda.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <button type="button" class="back"><i class="fa-solid fa-arrow-left"></i></button>
+    <div class="header">
+        <div class="container">
+            <h1 class="reflection">Agenda</h1>
+            <p>A deep dive into the foundational components of modern computing</p>
+        </div>
+    </div>
+    <div class="components">
+        <h2 class="reflection">Choose the Component</h2>
+        <div class="container">
+
+            <!-- CPU -->
+            <div class="cpu">
+                <div class="text">
+                    <h3 class="reflection">CPU<i class="fa-solid fa-microchip"></i></h3>
+                    <h4>The Brain / System Executor</h4>
+                </div>
+                <div class="specs">
+                    <h4 class="reflection">Critical Specifications</h4>
+                    <ul>
+                        <li><strong>Cores & Threads:</strong> Physical processing units. More cores allow for better
+                            multitasking.</li>
+                        <li><strong>Clock Speed (GHz):</strong> Cycles per second. Higher clocks drastically improve
+                            single-threaded performance.</li>
+                        <li><strong>L2 / L3 Cache:</strong> Ultra-fast SRAM physically located on the CPU die.</li>
+                    </ul>
+                </div>
+                <div class="usages">
+                    <h4 class="reflection">Recommended Use Cases</h4>
+                    <ul>
+                        <li><strong>Software Compilation & Engineering</strong></li>
+                        <li><strong>Competitive Gaming</strong></li>
+                        <li><strong>General Productivity</strong></li>
+                    </ul>
+                    <ul>
+                        <li> Opt for high core counts (14+ cores
+                            like Intel i7/i9 or Ryzen 9) to drastically reduce build times in heavy IDEs and speed up
+                            complex circuit simulations.</li>
+                        <li> Prioritize massive L3 Cache and high clock speeds
+                            (e.g., AMD Ryzen 7 7800X3D) to maximize frame rates at 1080p/1440p.</li>
+                        <li>A modern 6-core processor (e.g., Ryzen 5 7600 or Core
+                            i5) is the perfect budget sweet spot for everyday multitasking.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- GPU -->
+            <div class="gpu">
+                <div class="text">
+                    <h3 class="reflection">GPU<i class="bi bi-gpu-card"></i></h3>
+                    <h4>The Eye / Video Processor</h4>
+                </div>
+                <div class="specs">
+                    <h4 class="reflection">Critical Specifications</h4>
+                    <ul>
+                        <li><strong>VRAM (Video RAM):</strong> Dedicated memory (GDDR6/X) for storing high-resolution
+                            textures.</li>
+                        <li><strong>CUDA / Stream Processors:</strong> The actual computational units for rendering.
+                        </li>
+                        <li><strong>TGP (Total Graphics Power):</strong> The maximum wattage the GPU is allowed to draw.
+                        </li>
+                    </ul>
+                </div>
+                <div class="usages">
+                    <h4 class="reflection">Recommended Use Cases</h4>
+                    <ul>
+                        <li><strong>Machine Learning & 3D Rendering</strong></li>
+                        <li><strong>1440p / 4K AAA Gaming</strong></li>
+                        <li><strong>Basic Esports & Web Dev</strong></li>
+                    </ul>
+                    <ul>
+                        <li>Nvidia GPUs (RTX 4070 Ti and up) are
+                            strictly recommended due to their CUDA architecture dominance and Tensor cores.</li>
+                        <li> Requires high VRAM (12GB to 16GB) and strong raw
+                            rasterization (e.g., Radeon RX 7800 XT or RTX 4070 Super).</li>
+                        <li>An entry-level dedicated card (RTX 4060) or even
+                            modern integrated graphics (iGPU) is plenty for CS2, Valorant, and UI design.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Motherboard -->
+            <div class="motherboard">
+                <div class="text">
+                    <h3 class="reflection">Motherboard<i class="bi bi-motherboard"></i></h3>
+                    <h4>The Nervous System / Interconnect</h4>
+                </div>
+                <div class="specs">
+                    <h4 class="reflection">Critical Specifications</h4>
+                    <ul>
+                        <li><strong>Socket & Chipset:</strong> Defines processor compatibility and I/O bandwidth.</li>
+                        <li><strong>VRM Power Phases:</strong> Regulates power delivery from the PSU to the CPU.</li>
+                        <li><strong>Form Factor:</strong> Physical dimensions (ATX, Micro-ATX, Mini-ITX).</li>
+                    </ul>
+                </div>
+                <div class="usages">
+                    <h4 class="reflection">Recommended Use Cases</h4>
+                    <ul>
+                        <li><strong>Enthusiast Overclocking</strong></li>
+                        <li><strong>Balanced Builds</strong></li>
+                        <li><strong>Small Form Factor (SFF)</strong></li>
+                    </ul>
+                    <ul>
+                        <li>High-end chipsets (Intel Z790 or AMD X670) with
+                            16+ phase VRMs to safely handle voltage unlocked CPUs pulling 250W+.</li>
+                        <li> Mid-tier boards (B760 or B650) provide the best value,
+                            offering PCIe Gen 4/5 and high-speed RAM support without the extreme premium.</li>
+                        <li>Mini-ITX boards are required for ultra-compact,
+                            portable desktop builds.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- RAM -->
+            <div class="ram">
+                <div class="text">
+                    <h3 class="reflection">RAM<i class="fa-solid fa-memory"></i></h3>
+                    <h4>The Workbench / Short-Term Memory</h4>
+                </div>
+                <div class="specs">
+                    <h4 class="reflection">Critical Specifications</h4>
+                    <ul>
+                        <li><strong>Capacity (GB):</strong> Determines total workload buffer before slowing down.</li>
+                        <li><strong>Frequency (MT/s):</strong> Speed of data transfer to the processor.</li>
+                        <li><strong>CAS Latency (CL):</strong> Response delay in clock cycles.</li>
+                    </ul>
+                </div>
+                <div class="usages">
+                    <h4 class="reflection">Recommended Use Cases</h4>
+                    <ul>
+                        <li><strong>Virtual Machines & Databases</strong></li>
+                        <li><strong>Modern Gaming</strong></li>
+                        <li><strong>Basic Browsing & Office</strong></li>
+                    </ul>
+                    <ul>
+                        <li>32GB to 64GB is critical if you are
+                            allocating memory to local Linux VMs, Docker containers, or running local Oracle SQL
+                            databases.</li>
+                        <li>16GB is the absolute minimum, but 32GB (at 6000 MT/s) is
+                            highly recommended for smooth 1% low frame rates in heavy titles.</li>
+                        <li>8GB to 16GB DDR4 is perfectly adequate.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Storage -->
+            <div class="storage">
+                <div class="text">
+                    <h3 class="reflection">Storage<i class="fa-solid fa-hard-drive"></i></h3>
+                    <h4>The Vault / Non-Volatile Memory</h4>
+                </div>
+                <div class="specs">
+                    <h4 class="reflection">Critical Specifications</h4>
+                    <ul>
+                        <li><strong>Interface (NVMe vs. SATA):</strong> PCIe-based NVMe drives offer drastically higher
+                            throughput.</li>
+                        <li><strong>Read/Write Speeds:</strong> Dictates OS boot times and game asset loading.</li>
+                        <li><strong>Endurance (TBW):</strong> Flash cell durability over time.</li>
+                    </ul>
+                </div>
+                <div class="usages">
+                    <h4 class="reflection">Recommended Use Cases</h4>
+                    <ul>
+                        <li><strong>Video Editing & Raw Media</strong></li>
+                        <li><strong>Standard OS & Gaming</strong></li>
+                        <li><strong>Cold Storage & Backups</strong></li>
+                    </ul>
+                    <ul>
+                        <li>2TB+ PCIe Gen 4/Gen 5 NVMe SSDs (7000+ MB/s) to
+                            scrub through 4K timelines without stuttering.</li>
+                        <li>A reliable 1TB NVMe SSD ensures lightning-fast
+                            Windows boot times and eliminates loading screens.</li>
+                        <li>Cheaper, high-capacity SATA SSDs or mechanical HDDs
+                            are still the best value for archiving old files and photos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Battery (Laptops) -->
+            <div class="battery">
+                <div class="text">
+                    <h3 class="reflection">Battery<i class="fa-solid fa-battery-full"></i></h3>
+                    <h4>The Reservoir / Mobile Power</h4>
+                </div>
+                <div class="specs">
+                    <h4 class="reflection">Critical Specifications</h4>
+                    <ul>
+                        <li><strong>Watt-Hours (Wh):</strong> Overall energy capacity rating.</li>
+                        <li><strong>Chemistry:</strong> Lithium-Polymer designs offer high energy density.</li>
+                        <li><strong>Charging Wattage:</strong> Power delivery support (e.g., 100W USB-C).</li>
+                    </ul>
+                </div>
+                <div class="usages">
+                    <h4 class="reflection">Recommended Use Cases</h4>
+                    <ul>
+                        <li><strong>Frequent Commuters & Campus Use</strong></li>
+                        <li><strong>Desktop Replacements</strong></li>
+                    </ul>
+                    <ul>
+                        <li>Seek 80Wh to 99.9Wh (the maximum legal
+                            flight limit) to survive long days of compiling code or attending lectures without a
+                            charger.</li>
+                        <li>50Wh to 70Wh is fine for heavy gaming laptops that
+                            will spend 95% of their life plugged into a wall outlet.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Material (Laptops) -->
+            <div class="material">
+                <div class="text">
+                    <h3 class="reflection">Material<i class="fa-solid fa-shield-halved"></i></h3>
+                    <h4>The Chassis / Thermal Armor</h4>
+                </div>
+                <div class="specs">
+                    <h4 class="reflection">Critical Specifications</h4>
+                    <ul>
+                        <li><strong>Construction Type:</strong> Machined Aluminum vs. Polycarbonate Plastic.</li>
+                        <li><strong>Thermal Conductivity:</strong> Metals dissipate internal heat faster.</li>
+                        <li><strong>Rigidity:</strong> Protection for delicate internal PCBs.</li>
+                    </ul>
+                </div>
+                <div class="usages">
+                    <h4 class="reflection">Recommended Use Cases</h4>
+                    <ul>
+                        <li><strong>Premium Durability & Travel</strong></li>
+                        <li><strong>Ultra-light Portability</strong></li>
+                        <li><strong>Budget Constraints</strong></li>
+                    </ul>
+                    <ul>
+                        <li>CNC Machined Aluminum provides zero deck flex
+                            and protects the internal motherboard from crushing forces in a backpack.</li>
+                        <li>Magnesium-Aluminum alloys are used in high-end
+                            ultrabooks to keep the weight under 1.0 kg while retaining metal rigidity.</li>
+                        <li>Polycarbonate ABS plastic is cost-effective and
+                            perfectly fine for laptops that stay on a desk.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="agenda.js" defer></script>
+
+</html>

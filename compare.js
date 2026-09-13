@@ -162,3 +162,64 @@ let backBtn = document.querySelector(".back");
 backBtn.addEventListener("click", () => {
     window.location.href = "laptops.html";
 });
+
+async function getImages(laptop, idx) {
+    const username = "Mahmoud_Elagmy";
+    const params = new URLSearchParams({
+        "shopname": username,
+        "lang": "en",
+        "Brand": laptop.brand,
+        "ProductCode": laptop.productCode
+    });
+    const url = `https://live.icecat.biz/api/?${params.toString()}`;
+    try {
+        let response = await fetch(url);
+        let data = await response.json();
+        if (!data || !data.data || !data.data.Gallery) {
+            console.log("No Data");
+            return;
+        }
+        let webpImages = [];
+        if (Array.isArray(data.data.Gallery)) {
+            data.data.Gallery.forEach(item => {
+                if (item?.Pic) {
+                    webpImages.push(item.Pic);
+                }
+            });
+        }
+        let card = document.querySelectorAll(".col");
+        let cardImage = card[idx].querySelector("img");
+        console.log(cardImage.src);
+        if (card) {
+            imagesGallry(cardImage, webpImages);
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+};
+
+if (objs[0]) {
+    getImages(objs[0], 0);
+};
+
+if (objs[1]) {
+    getImages(objs[1], 1);
+};
+
+if (objs[2]) {
+    getImages(objs[2], 2);
+};
+
+function imagesGallry(card, webpImages) {
+    if (!card || webpImages.length == 0) return;
+    let idx = 0;
+    setInterval(() => {
+        idx = (idx + 1) % webpImages.length;
+        card.style.animation = "none";
+        card.offsetHeight;
+        card.style.animation = "fade-in 0.5s ease-in-out forwards";
+        card.src = webpImages[idx];
+    }, 5000);
+};
+

@@ -102,10 +102,15 @@
     transition: all 0.3s ease-in-out;
 }
 
-.box svg {
+.box svg,
+.box i {
     width: 80px;
     height: 80px;
     color: var(--color-text-secondary);
+}
+
+.box i {
+    font-size: 3rem;
 }
 
 .box p {
@@ -164,7 +169,8 @@
     border-radius: var(--radius);
 }
 
-.products .list .box button {
+.products .list .box button,
+.adds button {
     background-color: var(--color-button-primary-bg);
     color: var(--color-button-primary-text);
     padding: 10px;
@@ -177,7 +183,8 @@
     transition: all 0.3s ease-in-out;
 }
 
-.products .list .box button:hover {
+.products .list .box button:hover,
+.adds button:hover {
     background-color: var(--color-button-primary-bg-hover);
     color: var(--color-button-primary-text-hover);
     border: 2px solid var(--color-button-primary-border-hover);
