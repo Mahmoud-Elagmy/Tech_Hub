@@ -175,7 +175,7 @@
 
 .usages ul:first-of-type li:hover,
 .usages ul:first-of-type li.active {
-    color: var(--color-text-primary);
+    color: var(--color-text-secondary);
 }
 
 .usages ul:first-of-type li.hidden {
@@ -193,7 +193,7 @@
 .usages ul li,
 .specs ul li {
     font-size: 1.2rem;
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     line-height: 1.5;
     max-width: 800px;
     letter-spacing: 1.5px;
