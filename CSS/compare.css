@@ -1,39 +1,3 @@
-:root {
-    --color-background-main: #0D1117;
-    --color-surface-card: #161B22;
-    --color-surface-elevated: #21262D;
-    --color-surface-code: #161B22;
-    --color-surface-badge: #21262D;
-
-    /* Typography */
-    --color-text-primary: #F0F6FC;
-    --color-text-secondary: #8D96A0;
-    --color-text-muted: #6E7681;
-
-    /* Borders & Dividers */
-    --color-border-subtle: #30363D;
-    --color-border-strong: #8D96A0;
-
-    /* Interactive / Buttons */
-    --color-button-primary-bg: #F0F6FC;
-    --color-button-primary-text: #0D1117;
-    --color-button-secondary-bg: #21262D;
-    --color-button-secondary-text: #F0F6FC;
-
-    --color-button-primary-border: #30363D;
-    --color-button-primary-bg-hover: #ffffff00;
-    --color-button-primary-text-hover: #e7e9ec;
-    --color-button-primary-border-hover: #8D96A0;
-
-    /* Status */
-    --color-success: #3FB950;
-    --color-danger: #F85149;
-
-    --main-padd: 15px;
-    --radius: 16px;
-}
-
-
 .back {
     position: fixed;
     top: 5%;
