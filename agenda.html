@@ -36,6 +36,9 @@
                     <h4>The Brain / System Executor</h4>
                 </div>
                 <div class="specs">
+                    <model-viewer src="assets/cpu_ibm_processor_9121.glb" auto-play auto-rotate camera-controls
+                        camera-orbit="0deg 45deg 50%" min-camera-orbit="auto auto 30%" max-camera-orbit="auto auto 60%"
+                        shadow-intensity="1"></model-viewer>
                     <h4 class="reflection">Critical Specifications</h4>
                     <ul>
                         <li><strong>Cores & Threads:</strong> Physical processing units. More cores allow for better
@@ -71,6 +74,9 @@
                     <h4>The Eye / Video Processor</h4>
                 </div>
                 <div class="specs">
+                    <model-viewer src="assets/nvidia_geforce_rtx_3090_-_gpu.glb" auto-play auto-rotate camera-controls
+                        camera-orbit="0deg 90deg 50%" min-camera-orbit="auto auto 30%" max-camera-orbit="auto auto 60%"
+                        shadow-intensity="1"></model-viewer>
                     <h4 class="reflection">Critical Specifications</h4>
                     <ul>
                         <li><strong>VRAM (Video RAM):</strong> Dedicated memory (GDDR6/X) for storing high-resolution
@@ -106,6 +112,9 @@
                     <h4>The Nervous System / Interconnect</h4>
                 </div>
                 <div class="specs">
+                    <model-viewer src="assets/pc_motherboard_asus_prime_h510m-k.glb" auto-play auto-rotate
+                        camera-controls camera-orbit="0deg 30deg 80%" min-camera-orbit="auto auto 30%"
+                        max-camera-orbit="auto auto 100%" shadow-intensity="1"></model-viewer>
                     <h4 class="reflection">Critical Specifications</h4>
                     <ul>
                         <li><strong>Socket & Chipset:</strong> Defines processor compatibility and I/O bandwidth.</li>
@@ -138,6 +147,9 @@
                     <h4>The Workbench / Short-Term Memory</h4>
                 </div>
                 <div class="specs">
+                    <model-viewer src="assets/kingston_hyperx_fury_black_ram_module.glb" auto-play auto-rotate
+                        camera-controls camera-orbit="90deg 90deg 50%" min-camera-orbit="auto auto 30%"
+                        max-camera-orbit="auto auto 60%" shadow-intensity="1"></model-viewer>
                     <h4 class="reflection">Critical Specifications</h4>
                     <ul>
                         <li><strong>Capacity (GB):</strong> Determines total workload buffer before slowing down.</li>
@@ -170,6 +182,9 @@
                     <h4>The Vault / Non-Volatile Memory</h4>
                 </div>
                 <div class="specs">
+                    <model-viewer src="assets/storage_ssd_hdd_m.2.glb" auto-play auto-rotate camera-controls
+                        camera-orbit="0deg 30deg 50%" min-camera-orbit="auto auto 30%" max-camera-orbit="auto auto 100%"
+                        shadow-intensity="1"></model-viewer>
                     <h4 class="reflection">Critical Specifications</h4>
                     <ul>
                         <li><strong>Interface (NVMe vs. SATA):</strong> PCIe-based NVMe drives offer drastically higher
@@ -260,7 +275,8 @@
 
         </div>
     </div>
+    <script src="agenda.js" defer></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
 </body>
-<script src="agenda.js" defer></script>
 
 </html>
