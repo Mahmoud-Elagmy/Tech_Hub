@@ -102,3 +102,8 @@ window.addEventListener("scroll", () => {
 upBtn.onclick = () => {
     window.scrollTo(0, 0);
 }
+
+let copyDate = document.querySelector("footer p span");
+
+
+copyDate.innerHTML = new Date().getFullYear();
