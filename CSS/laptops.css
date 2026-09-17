@@ -146,7 +146,18 @@ button.clicked+ul {
     background-color: var(--color-surface-card);
     border-radius: var(--radius);
     box-shadow: 0 0 5px var(--color-text-muted);
-    /* display: none; */
+}
+
+@media (max-width: 767px) {
+    .filter {
+        top: calc(100% + 300px);
+        right: 20px;
+    }
+
+    button.clicked+ul {
+        top: calc(100% + 325px);
+        right: 20px;
+    }
 }
 
 ul li {
