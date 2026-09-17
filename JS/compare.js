@@ -17,11 +17,49 @@ let grid = document.querySelector(".compare");
 
 grid.style.gridTemplateColumns = `repeat(${objs.length}, minmax(200px, 1fr))`;
 
+
 if (objs.length == 0) {
     grid.innerHTML = `<h2>Nothing to compare</h2>`;
 }
 
+
 else {
+
+    const currencyApiKey = "cur_live_XbUZpNHti7ntzVz3jt19a1HP3eY3sugP95wf03N8";
+    const url = `https://api.currencyapi.com/v3/latest?apikey=${currencyApiKey}&base_currency=USD&currencies=EGP`;
+
+    async function fetchData(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`API Error: ${response.status}`);
+            }
+            const data = await response.json();
+            return data;
+        }
+        catch (error) {
+            console.log(error);
+            return null;
+        }
+    }
+    let vals = [];
+    function getVals(obj, rate) {
+        if (!obj || !obj.price) return;
+        let rawPrice = Number.parseInt(String(obj.price).replace(/\D/g, ""));
+        vals.push((rawPrice / rate).toFixed(2));
+    }
+    async function getRate() {
+        const data = await fetchData(url);
+        let rate = data?.data?.EGP?.value || 52.5;
+        if (objs[0]) getVals(objs[0], rate);
+        if (objs[1]) getVals(objs[1], rate);
+        if (objs[2]) getVals(objs[2], rate);
+        let prices = document.querySelectorAll(".price");
+        for (let i = 0; i < prices.length; i++) {
+            prices[i].textContent = `${objs[i].price} - ${vals[i]} USD`;
+        }
+    }
+    getRate();
     grid.innerHTML = objs.map((l) => `
     <div class="col">
     <button type="button" class="remove">Remove</button>
@@ -162,63 +200,3 @@ let backBtn = document.querySelector(".back");
 backBtn.addEventListener("click", () => {
     window.location.href = "laptops.html";
 });
-
-async function getImages(laptop, idx) {
-    const username = "Mahmoud_Elagmy";
-    const params = new URLSearchParams({
-        "shopname": username,
-        "lang": "en",
-        "Brand": laptop.brand,
-        "ProductCode": laptop.productCode
-    });
-    const url = `https://live.icecat.biz/api/?${params.toString()}`;
-    try {
-        let response = await fetch(url);
-        let data = await response.json();
-        if (!data || !data.data || !data.data.Gallery) {
-            console.log("No Data");
-            return;
-        }
-        let webpImages = [];
-        if (Array.isArray(data.data.Gallery)) {
-            data.data.Gallery.forEach(item => {
-                if (item?.Pic) {
-                    webpImages.push(item.Pic);
-                }
-            });
-        }
-        let card = document.querySelectorAll(".col");
-        let cardImage = card[idx].querySelector("img");
-        if (card) {
-            imagesGallry(cardImage, webpImages);
-        }
-    }
-    catch (error) {
-        console.log(error);
-    }
-};
-
-if (objs[0]) {
-    getImages(objs[0], 0);
-};
-
-if (objs[1]) {
-    getImages(objs[1], 1);
-};
-
-if (objs[2]) {
-    getImages(objs[2], 2);
-};
-
-function imagesGallry(card, webpImages) {
-    if (!card || webpImages.length == 0) return;
-    let idx = 0;
-    setInterval(() => {
-        idx = (idx + 1) % webpImages.length;
-        card.style.animation = "none";
-        card.offsetHeight;
-        card.style.animation = "fade-in 0.5s ease-in-out forwards";
-        card.src = webpImages[idx];
-    }, 5000);
-};
-
