@@ -80,3 +80,13 @@ lis.forEach((li) => {
         }
     }
 })
+
+
+let btn3D = document.querySelectorAll(".specs button");
+
+
+for (let b of btn3D) {
+    b.onclick = () => {
+        b.parentElement.children[1].classList.toggle("active");
+    }
+}

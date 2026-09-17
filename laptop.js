@@ -494,17 +494,74 @@ if (compareBtn) {
     }
 }
 
+let filterBtn = document.querySelector(".filter");
+let lis = document.querySelectorAll("ul li");
+let choosenPrice;
+
+
+function filter(li) {
+    let check = false;
+    if (!li.classList.contains("active")) {
+        li.classList.add("active");
+        for (let l of lis) {
+            if (li !== l) {
+                l.classList.remove("active");
+            }
+        }
+        check = true;
+    }
+    else {
+        li.classList.remove("active");
+    }
+    return check;
+}
+
 
 
 box.forEach((b) => {
     b.addEventListener("click", () => {
         box.forEach((bx) => {
             bx.classList.remove("active");
-        })
+        });
 
-        let selectd = b.children[1].textContent.toLowerCase();
+        b.classList.add("active");
+
+        filterBtn.classList.add("active");
+
+        filterBtn.onclick = () => {
+            filterBtn.classList.toggle("clicked");
+            if (filterBtn.classList.contains("clicked")) {
+                for (let l of lis) {
+                    l.onclick = () => {
+                        if (filter(l)) {
+                            let match = l.textContent.match(/\d+/g);
+                            choosenPrice = match ? Number.parseInt((String(match).replace(",", ""))) * 10 : 0;
+                        }
+                        else {
+                            choosenPrice = undefined;
+                        }
+                        // Re-Render
+                        let activeBox = document.querySelector(".brands .container .content .box.active");
+                        if (activeBox) {
+                            activeBox.click();
+                        }
+                    }
+                }
+            }
+        }
+
+        let selectd = b.children[1].textContent.toLowerCase().trim();
         let activeList = laptopsData.filter((l) => l.brand.toLowerCase() === selectd);
         list.innerHTML = ``;
+
+        if (typeof choosenPrice !== "undefined" && choosenPrice) {
+            activeList = activeList.filter((list) => {
+                let p = String(list.price);
+                p = Number.parseInt(p.replace(/\D/g, ""));
+                return p <= choosenPrice;
+            });
+        }
+
 
         for (let i of activeList) {
             let { id, brand, name, image } = i;

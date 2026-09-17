@@ -1,3 +1,15 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .back {
     position: fixed;
     top: 5%;
@@ -109,6 +121,44 @@
     text-align: center;
 }
 
+.specs button {
+    background-color: var(--color-button-primary-bg);
+    color: var(--color-button-primary-text);
+    border-radius: var(--radius);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.specs button i {
+    display: inline-block;
+    font-size: 1.25rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.specs button:hover {
+    background-color: var(--color-button-primary-bg-hover);
+    color: var(--color-button-primary-text-hover);
+}
+
+.specs button:hover i {
+    transform: rotate(180deg);
+}
+
+
+model-viewer {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+model-viewer.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transition: all 0.3s ease-in-out;
+}
+
 .specs h4,
 .usages h4 {
     font-size: 1.2rem;
@@ -173,17 +223,6 @@
     display: block;
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateX(-5px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 
 .text {

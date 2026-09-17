@@ -12,9 +12,13 @@ function activeLink() {
 
 activeLink();
 
-function showMenu() {
 
-    li[3].onclick = () => {
+function showMenu() {
+    li[3].children[0].onclick = (e) => {
+        e.preventDefault();
+    }
+
+    li[3].onclick = (e) => {
         li[3].classList.toggle("clicked");
     }
 };
@@ -40,6 +44,7 @@ let burgerBtn = document.querySelector(".burger-menu");
 let burgerMenu = document.querySelector(".menu");
 
 burgerBtn.addEventListener("click", () => {
+    burgerBtn.classList.toggle("active");
     burgerMenu.classList.toggle("active");
 });
 
