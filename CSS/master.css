@@ -237,7 +237,7 @@ header .container nav {
     position: fixed;
     top: 0;
     right: 20px;
-    width: 100%;
+    width: fit-content;
     padding-left: var(--main-padd);
     padding-right: var(--main-padd);
     padding-top: 20px;
