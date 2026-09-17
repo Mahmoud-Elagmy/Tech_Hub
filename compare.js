@@ -189,7 +189,6 @@ async function getImages(laptop, idx) {
         }
         let card = document.querySelectorAll(".col");
         let cardImage = card[idx].querySelector("img");
-        console.log(cardImage.src);
         if (card) {
             imagesGallry(cardImage, webpImages);
         }
