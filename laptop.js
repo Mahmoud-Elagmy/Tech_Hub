@@ -438,6 +438,242 @@ const laptopsData = [
             display: "The OLED panel delivers stunning cinema-grade DCI-P3 colors and infinite contrast blacks, making movies look incredible.",
             battery: "56Wh provides solid all-day usage thanks to the low-power CPU."
         }
+    },
+    // ==========================================
+    // DELL
+    // ==========================================
+    {
+        id: "dell-alienware-m16-r2", brand: "Dell", name: "Alienware m16 R2", productCode: "AWm16-9051BLK", image: "assets/alienware.webp",
+        price: "EGP 88,000", priceVal: 88000,
+        cpu: "Intel Core Ultra 9 185H (16 Cores: 6P+8E+2LPE)", cpuPower: 88,
+        gpu: "RTX 4070 8GB (140W | AV1 Encode)", gpuPower: 88,
+        ram: "32GB DDR5 5600MHz", ramVal: 32,
+        ramUpgrade: "2x SO-DIMM slots (Both upgradeable, max 64GB)",
+        storage: "1TB Gen4 NVMe SSD", storageVal: 1024,
+        display: "16.0 QHD+ 240Hz (100% sRGB, G-Sync)", displayScore: 240,
+        battery: "90Wh", batteryVal: 90,
+        ports: "1x Thunderbolt 4, 1x Type-C, 2x USB-A, HDMI 2.1, RJ45, MicroSD",
+        weight: "2.61 kg", weightVal: 2.61,
+        material: "Anodized Aluminum lid with magnesium alloy internal frame",
+        hiddenNotes: ["Features 'Stealth Mode' which turns off all RGB and lowers fans to make it look like a normal office laptop instantly.", "Redesigned thermal shelf removes the massive rear vents of older Alienware models."],
+        problems: ["Alienware Command Center software is notoriously buggy and slow to load.", "Very heavy machine, and the included power adapter adds another 1kg to your backpack.", "Runs very hot on the keyboard deck under max load."],
+        useCases: ["High-End 1440p Gaming", "Machine Learning Training", "Game Development"],
+        specDetails: {
+            cpu: "The Ultra 9 includes a dedicated Neural Processing Unit (NPU) for AI tasks, reducing battery drain during video calls by handling background blur natively.",
+            gpu: "Pushed to the maximum 140W limit, ensuring desktop-class performance and smooth Frame Generation in heavy titles.",
+            ram: "32GB of 5600MHz memory completely eliminates stutters in heavily modded games and massive Unity/Unreal Engine projects.",
+            storage: "Dual M.2 slots support RAID configurations for those needing extreme data redundancy or speeds.",
+            display: "A premium 240Hz 16:10 QHD panel makes it perfect for both ultra-fast esports and wide-timeline video editing.",
+            battery: "Despite the 90Wh capacity, expect only around 4 hours of basic use due to the power-hungry components."
+        }
+    },
+    {
+        id: "dell-xps-16", brand: "Dell", name: "XPS 16 (9640)", productCode: "XPS9640-7052SLV", image: "assets/dellxps.webp",
+        price: "EGP 115,000", priceVal: 115000,
+        cpu: "Intel Core Ultra 7 155H (16 Cores: 6P+8E+2LPE)", cpuPower: 82,
+        gpu: "RTX 4060 8GB (50W | Studio Drivers)", gpuPower: 60,
+        ram: "32GB LPDDR5x 7467MHz", ramVal: 32,
+        ramUpgrade: "0 slots (100% Soldered LPDDR5x, Non-upgradeable)",
+        storage: "1TB PCIe Gen4 SSD", storageVal: 1024,
+        display: "16.3 4K+ OLED Touch (100% DCI-P3, 500-nits)", displayScore: 120,
+        battery: "99.5Wh", batteryVal: 99.5,
+        ports: "3x Thunderbolt 4, MicroSD (No USB-A, No HDMI)",
+        weight: "2.13 kg", weightVal: 2.13,
+        material: "CNC Machined Aluminum chassis with Gorilla Glass palm rest",
+        hiddenNotes: ["The trackpad is invisible; it is seamlessly integrated into the glass palm rest.", "Features a capacitive touch row for function keys instead of physical buttons."],
+        problems: ["No traditional USB-A or HDMI ports; relies entirely on dongles (though Dell includes one in the box).", "The 50W limit on the RTX 4060 severely chokes its gaming performance compared to other laptops.", "Touch-row function keys are frustrating for programmers who rely on tactile Esc and F-keys."],
+        useCases: ["Executive Business", "Professional Video Editing", "High-End Content Consumption"],
+        specDetails: {
+            cpu: "A highly efficient Meteor Lake processor perfectly suited for balancing heavy Adobe workloads with all-day battery life.",
+            gpu: "Strictly tuned for creative applications rather than gaming. The low 50W TGP keeps the ultra-thin chassis from melting.",
+            ram: "7467MHz memory is among the fastest on the market, dramatically speeding up rendering times.",
+            storage: "1TB Gen4 provides the bandwidth required to scrub through 4K video timelines natively.",
+            display: "A breathtaking 4K+ OLED touchscreen. Infinite contrast ratio and perfect color accuracy for professional grading.",
+            battery: "At 99.5Wh, it legally maxes out TSA flight regulations, providing exceptional battery life for travel."
+        }
+    },
+    {
+        id: "dell-g15", brand: "Dell", name: "Dell G15 (5530)", productCode: "G15-5530-BLK", image: "assets/dell5530.webp",
+        price: "EGP 43,000", priceVal: 43000,
+        cpu: "Intel Core i5-13450HX (10 Cores: 4P+6E)", cpuPower: 75,
+        gpu: "RTX 4050 6GB (140W | AV1 Encode)", gpuPower: 72,
+        ram: "16GB DDR5 4800MHz", ramVal: 16,
+        ramUpgrade: "2x SO-DIMM slots (Both upgradeable, max 32GB)",
+        storage: "512GB Gen4 NVMe SSD", storageVal: 512,
+        display: "15.6 FHD 165Hz (100% sRGB, G-Sync)", displayScore: 165,
+        battery: "86Wh", batteryVal: 86,
+        ports: "1x Type-C, 3x USB-A, HDMI 2.1, RJ45",
+        weight: "2.81 kg", weightVal: 2.81,
+        material: "Heavy plastic chassis with retro-gaming aesthetic",
+        hiddenNotes: ["Shares the exact same internal thermal cooling layout as the premium Alienware laptops.", "Features a physical 'G-Shift' macro key to instantly max out fan speeds."],
+        problems: ["Incredibly heavy and thick; weighing 2.8kg makes it one of the heaviest 15-inch laptops on the market.", "The plastic shell feels cheap and creaks slightly under pressure.", "Trackpad is very small and feels inaccurate."],
+        useCases: ["Budget Hardcore Gaming", "Engineering Students", "Desktop Replacement"],
+        specDetails: {
+            cpu: "HX-class processor provides excellent performance for physics-heavy games and CAD software.",
+            gpu: "Uniquely for a budget laptop, Dell allows the RTX 4050 to draw a full 140W, extracting absolute maximum performance.",
+            ram: "16GB DDR5 is the standard sweet spot, fully upgradeable down the line.",
+            storage: "512GB is limiting; users will likely need to utilize the second empty M.2 slot shortly after purchase.",
+            display: "165Hz with 100% sRGB is fantastic for this price tier, ensuring accurate colors and tear-free G-Sync gaming.",
+            battery: "A surprisingly large 86Wh battery provides decent backup power, though the HX processor drains it quickly."
+        }
+    },
+
+    // ==========================================
+    // MSI
+    // ==========================================
+    {
+        id: "msi-raider-ge78", brand: "MSI", name: "Raider GE78 HX", productCode: "GE78HX-14VHG", image: "assets/raider.webp",
+        price: "EGP 145,000", priceVal: 145000,
+        cpu: "Intel Core i9-14900HX (24 Cores: 8P+16E)", cpuPower: 99,
+        gpu: "RTX 4080 12GB (175W | AV1 Encode)", gpuPower: 95,
+        ram: "32GB DDR5 5600MHz", ramVal: 32,
+        ramUpgrade: "2x SO-DIMM slots (Both upgradeable, max 64GB)",
+        storage: "2TB Gen4 NVMe SSD", storageVal: 2048,
+        display: "17.0 QHD+ 240Hz (100% DCI-P3, IPS)", displayScore: 240,
+        battery: "99.9Wh", batteryVal: 99.9,
+        ports: "1x Thunderbolt 4, 2x Type-C, 2x USB-A, HDMI 2.1, SD Express, RJ45",
+        weight: "3.10 kg", weightVal: 3.10,
+        material: "Aluminum top and keyboard deck with plastic bottom and Matrix RGB bar",
+        hiddenNotes: ["Features an iconic 'Mystic Light' RGB matrix bar across the entire front lip.", "Speakers are tuned by Dynaudio and are some of the loudest on any Windows laptop."],
+        problems: ["Extreme weight (3.1kg) makes it strictly a desktop replacement, not meant for daily carry.", "The fans reach turbine-levels of noise (55dB+) under heavy load.", "Incredibly expensive power consumption requires a massive 330W brick."],
+        useCases: ["4K & VR Gaming", "Professional 3D Animation", "Extreme Enthusiasts"],
+        specDetails: {
+            cpu: "A monstrous 24-core desktop-replacement CPU capable of chewing through code compilation and 3D rendering faster than most desktop PCs.",
+            gpu: "The RTX 4080 at 175W pushes desktop-level frame rates and includes 12GB of VRAM for heavy 4K texture packs.",
+            ram: "32GB of high-speed memory ensures no bottlenecks between the i9 and the 4080.",
+            storage: "2TB is massive, featuring PCIe Gen 4 speeds for instant loading screens.",
+            display: "A 17-inch cinematic screen with 100% DCI-P3 coverage, providing desktop-monitor immersion and perfect color grading capability.",
+            battery: "Maxes out the legal 99.9Wh flight limit, but unplugged gaming will still kill it in 60 minutes."
+        }
+    },
+    {
+        id: "msi-cyborg-15", brand: "MSI", name: "Cyborg 15", productCode: "A12VE-046US", image: "assets/msicyborg.webp",
+        price: "EGP 38,000", priceVal: 38000,
+        cpu: "Intel Core i7-12650H (10 Cores: 6P+4E)", cpuPower: 65,
+        gpu: "RTX 4050 6GB (45W | AV1 Encode)", gpuPower: 55,
+        ram: "16GB DDR5 4800MHz", ramVal: 16,
+        ramUpgrade: "2x SO-DIMM slots (Both upgradeable, max 64GB)",
+        storage: "512GB Gen4 NVMe SSD", storageVal: 512,
+        display: "15.6 FHD 144Hz (45% NTSC)", displayScore: 144,
+        battery: "53.5Wh", batteryVal: 53.5,
+        ports: "1x Type-C, 2x USB-A, HDMI 2.1, RJ45",
+        weight: "1.98 kg", weightVal: 1.98,
+        material: "Translucent plastic chassis revealing internal components",
+        hiddenNotes: ["Unique translucent aesthetic similar to retro 90s consoles.", "Lighter than most budget 15-inch gaming laptops (under 2kg)."],
+        problems: ["The GPU is severely power-limited to just 45W, making it perform significantly worse than other RTX 4050 laptops.", "Cooling system only uses a single fan, which leads to thermal throttling.", "Screen is very dim (250 nits) with poor color accuracy."],
+        useCases: ["Casual Esports (Valorant, CS2)", "Student Daily Use", "Entry-level coding"],
+        specDetails: {
+            cpu: "An older 12th Gen processor, but its 10 cores still provide plenty of multi-threaded power for modern applications.",
+            gpu: "Strictly limited to 45W to keep the thin plastic chassis cool. Frame Generation helps, but raw performance is bottlenecked.",
+            ram: "16GB DDR5 gives it a modern edge for multitasking over older DDR4 budget systems.",
+            storage: "Standard 512GB, which fills up quickly with modern game installs.",
+            display: "High refresh rate for smooth gameplay, but the low color gamut makes it useless for video editing.",
+            battery: "A small 53.5Wh battery yields about 3-4 hours of video playback."
+        }
+    },
+    {
+        id: "msi-prestige-16", brand: "MSI", name: "Prestige 16 AI Evo", productCode: "B1MG-001US", image: "assets/msievo.webp",
+        price: "EGP 58,000", priceVal: 58000,
+        cpu: "Intel Core Ultra 7 155H (16 Cores: 6P+8E+2LPE)", cpuPower: 82,
+        gpu: "Intel Arc Graphics (Dual AV1 Codecs)", gpuPower: 38,
+        ram: "32GB LPDDR5x 6400MHz", ramVal: 32,
+        ramUpgrade: "0 slots (100% Soldered LPDDR5x, Non-upgradeable)",
+        storage: "1TB PCIe Gen4 SSD", storageVal: 1024,
+        display: "16.0 UHD+ OLED (100% DCI-P3, HDR 500)", displayScore: 100,
+        battery: "99.9Wh", batteryVal: 99.9,
+        ports: "2x Thunderbolt 4, 1x USB-A, HDMI 2.1, SD Card Reader, RJ45",
+        weight: "1.50 kg", weightVal: 1.50,
+        material: "Magnesium-Aluminum alloy chassis",
+        hiddenNotes: ["Features Wi-Fi 7 technology for future-proofed wireless speeds.", "Incredibly light for a 16-inch laptop due to the magnesium build."],
+        problems: ["Magnesium alloy feels slightly like plastic despite being a premium metal.", "No dedicated graphics card limits its use for 3D rendering and gaming.", "Speakers lack depth and bass compared to rivals."],
+        useCases: ["Data Science", "Corporate Productivity", "Web Development"],
+        specDetails: {
+            cpu: "Intel's AI-focused Ultra chip breezes through massive datasets and compiling scripts with high power efficiency.",
+            gpu: "Integrated Arc graphics are excellent for UI rendering and hardware-accelerated video decoding, but not for heavy gaming.",
+            ram: "32GB of soldered memory is a massive buffer for running multiple local Docker containers and virtual machines.",
+            storage: "1TB provides ample space for corporate files and development environments.",
+            display: "A flawless 4K OLED screen provides razor-sharp text for programming and perfect blacks for media consumption.",
+            battery: "Combines a massive 99.9Wh battery with a processor lacking a dedicated GPU, resulting in a phenomenal 14+ hours of battery life."
+        }
+    },
+
+    // ==========================================
+    // APPLE
+    // ==========================================
+    {
+        id: "apple-mbp-16-m3max", brand: "Apple", name: "MacBook Pro 16", productCode: "MUW43LL/A", image: "assets/Macpro16.webp",
+        price: "EGP 185,000", priceVal: 185000,
+        cpu: "Apple M3 Max (16 Cores: 12P+4E)", cpuPower: 98,
+        gpu: "Apple 40-Core GPU (Hardware Ray Tracing)", gpuPower: 92,
+        ram: "48GB Unified Memory", ramVal: 48,
+        ramUpgrade: "0 slots (Unified architecture, deeply integrated into the SoC)",
+        storage: "1TB PCIe Gen4 NVMe", storageVal: 1024,
+        display: "16.2 Liquid Retina XDR 120Hz (ProMotion, 1600-nits)", displayScore: 250,
+        battery: "100Wh", batteryVal: 100,
+        ports: "3x Thunderbolt 4, MagSafe 3, HDMI 2.1, SDXC Card Slot",
+        weight: "2.16 kg", weightVal: 2.16,
+        material: "100% Recycled CNC Aluminum Unibody",
+        hiddenNotes: ["Does not lose performance when unplugged from the wall; runs at 100% speed on battery.", "Features the best trackpad and built-in speakers in the entire laptop industry."],
+        problems: ["Astronomically expensive.", "MacOS cannot run most popular PC games natively.", "Zero repairability or upgradeability; if a component fails out of warranty, the motherboard must be replaced."],
+        useCases: ["Hollywood-level Video Editing", "Professional Audio Production (Logic Pro)", "iOS App Development"],
+        specDetails: {
+            cpu: "The M3 Max is an engineering marvel, delivering desktop i9 performance while drawing a fraction of the wattage.",
+            gpu: "A 40-core integrated GPU featuring dynamic caching and hardware ray tracing, dominating Premiere Pro and Final Cut workflows.",
+            ram: "48GB of 'Unified' memory means the GPU has direct access to the massive RAM pool, allowing you to load 3D scenes that would crash a standard PC.",
+            storage: "Apple's custom SSD controller pushes extreme sequential read speeds for zero-latency video scrubbing.",
+            display: "Mini-LED XDR display hits 1600 nits peak brightness for true HDR grading, operating at a buttery-smooth 120Hz.",
+            battery: "100Wh battery combined with ARM architecture yields an unbelievable 16-20 hours of real-world professional use."
+        }
+    },
+    {
+        id: "apple-mbp-14-m3pro", brand: "Apple", name: "MacBook Pro 14", productCode: "MRX33LL/A", image: "assets/Macpro14.webp",
+        price: "EGP 105,000", priceVal: 105000,
+        cpu: "Apple M3 Pro (11 Cores: 5P+6E)", cpuPower: 85,
+        gpu: "Apple 14-Core GPU", gpuPower: 75,
+        ram: "18GB Unified Memory", ramVal: 18,
+        ramUpgrade: "0 slots (Unified architecture, Non-upgradeable)",
+        storage: "512GB PCIe Gen4 NVMe", storageVal: 512,
+        display: "14.2 Liquid Retina XDR 120Hz (ProMotion, 1600-nits)", displayScore: 240,
+        battery: "72.4Wh", batteryVal: 72.4,
+        ports: "3x Thunderbolt 4, MagSafe 3, HDMI 2.1, SDXC",
+        weight: "1.61 kg", weightVal: 1.61,
+        material: "100% Recycled CNC Aluminum Unibody",
+        hiddenNotes: ["The 'Space Black' color variant uses an anodization seal that actively rejects fingerprint smudges.", "Incredible thermal efficiency; the fans rarely turn on during regular coding or web browsing."],
+        problems: ["Base storage of 512GB is quite low for a 'Pro' machine in this price bracket.", "The screen has a 'notch' at the top for the webcam which annoys some users.", "Gaming is still heavily restricted by macOS compatibility."],
+        useCases: ["Software Development", "Photography (Lightroom/Photoshop)", "Content Creation"],
+        specDetails: {
+            cpu: "The M3 Pro balances extreme processing power with thermal efficiency, making it the sweet spot for professional developers.",
+            gpu: "Easily handles multi-layered 4K video editing and heavy UI/UX design workloads in Figma or Illustrator.",
+            ram: "18GB of unified memory is vastly more efficient than standard PC RAM, behaving closer to 32GB in real-world swapping scenarios.",
+            storage: "Lightning-fast encrypted storage, though external drives are recommended for archiving large projects.",
+            display: "14.2-inch Mini-LED panel provides perfect contrast and ProMotion 120Hz makes UI navigation incredibly fluid.",
+            battery: "Provides up to 18 hours of continuous video playback, entirely eliminating battery anxiety for commuters."
+        }
+    },
+    {
+        id: "apple-mba-15-m3", brand: "Apple", name: "MacBook Air 15", productCode: "MRYM3LL/A", image: "assets/Macair.webp",
+        price: "EGP 65,000", priceVal: 65000,
+        cpu: "Apple M3 (8 Cores: 4P+4E)", cpuPower: 70,
+        gpu: "Apple 10-Core GPU", gpuPower: 45,
+        ram: "16GB Unified Memory", ramVal: 16,
+        ramUpgrade: "0 slots (Unified architecture, Non-upgradeable)",
+        storage: "512GB PCIe Gen4 NVMe", storageVal: 512,
+        display: "15.3 Liquid Retina 60Hz (500-nits, True Tone)", displayScore: 100,
+        battery: "66.5Wh", batteryVal: 66.5,
+        ports: "2x Thunderbolt 4, MagSafe 3, 3.5mm Audio",
+        weight: "1.51 kg", weightVal: 1.51,
+        material: "100% Recycled CNC Aluminum Unibody",
+        hiddenNotes: ["Completely fanless design. It makes absolutely zero noise, no matter how hard you push it.", "Can finally support dual external monitors (but only when the laptop lid is closed)."],
+        problems: ["Lack of active cooling (fans) means it will thermally throttle and slow down during long, sustained exports.", "Only has two USB-C ports on the left side; nothing on the right.", "Display is locked to 60Hz, lacking the smooth ProMotion of the Pro models."],
+        useCases: ["University Students", "Writers & Journalists", "Business & Office Work"],
+        specDetails: {
+            cpu: "The base M3 chip is phenomenally fast for everyday tasks, outperforming most high-end Windows ultrabooks effortlessly.",
+            gpu: "10-Core GPU handles light video editing and graphic design with ease, but struggles with sustained 3D rendering.",
+            ram: "16GB is the perfect amount for macOS, allowing endless multitasking without hitting memory swap limits.",
+            storage: "512GB provides solid headroom for documents, apps, and a moderate photo library.",
+            display: "A bright, beautiful IPS display. While it lacks the extreme contrast of the Pro's Mini-LED, its color accuracy is perfect.",
+            battery: "Because it lacks a fan and uses an ultra-efficient ARM chip, it provides 15-18 hours of true all-day battery life."
+        }
     }
 ];
 let box = document.querySelectorAll(".brands .container .content .box");
