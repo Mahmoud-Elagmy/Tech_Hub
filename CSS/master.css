@@ -739,7 +739,7 @@ header .container nav ul li a:focus {
     .laptops .image,
     .agenda .image {
         width: 100%;
-        min-height: 320px;
+        height: 100%;
         display: flex;
     }
 
